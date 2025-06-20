@@ -1,26 +1,26 @@
 #include <stdio.h>
+#include <stdlib.h>  // necessário para rand()
 
-#include "queue.h" // contem funções uteis para filas
-#include "proc.h"  // possui as funções dos processos
-#include "stats.h" // possui as funções de estatisticas 
-#include "utils.h" // possui funções uteis 
+#include "queue.h"
+#include "proc.h"
+#include "stats.h"
+#include "utils.h"
 
-// Utilizando as variáveis globais definidas no 'main'
-extern struct queue * ready;    // fila de aptos
-extern struct queue * ready2;   // segunda fila de aptos
-extern struct queue * blocked;  // fila de bloqueados
-extern struct queue * finished; // fila de finalizados
+// Variáveis globais
+extern struct queue * ready;
+extern struct queue * ready2;
+extern struct queue * blocked;
+extern struct queue * finished;
+extern int MAX_TIME;
 
 struct proc * scheduler(struct proc * current)
 {
     struct proc * selected = NULL;
 
-    // Tratamento do processo que estava executando
     if (current != NULL) {
         switch (current->state) {
             case READY:
             case BLOCKED: {
-                // Decide a fila de acordo com o remaining_time
                 int limiar = (int)(0.2 * MAX_TIME);
                 if (current->remaining_time <= limiar) {
                     enqueue(ready, current);
@@ -48,7 +48,7 @@ struct proc * scheduler(struct proc * current)
         }
     }
 
-    // Seleção do próximo processo
+    // Escolha da fila de forma probabilística
     int fila_escolhida = 0;
     int r = rand() % 100;
     if (isempty(ready) && isempty(ready2)) {
@@ -69,25 +69,9 @@ struct proc * scheduler(struct proc * current)
     }
 
     if (selected) {
-        if (selected->queue == 0)
-            count_ready_out(selected);
-        else
-            count_ready_out(selected); // pode usar a mesma função para estatística
+        count_ready_out(selected);  // usar a mesma função
         selected->state = RUNNING;
     }
 
     return selected;
 }
-// NOTE: essa fila de finalizados é utilizada apenas para
-// as estatisticas finais
-
-// variavel global que indica o tempo maximo que um processo pode executar ao todo
-extern int MAX_TIME;
-
-struct proc * scheduler(struct proc * current)
-{
-    struct proc * selected; 
-
-    return NULL;
-}
-

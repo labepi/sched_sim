@@ -138,3 +138,53 @@ int countqueue(struct queue *q)
 
     return num;
 }
+
+// Retorna o número de elementos na fila
+int length(struct queue *q) {
+    return countqueue(q);  // você já tem essa função
+}
+
+// Retorna o processo na posição 'index' (sem remover)
+struct proc * get(struct queue *q, int index) {
+    if (index < 0) return NULL;
+
+    struct proc *aux = q->head;
+    int i = 0;
+    while (aux != NULL && i < index) {
+        aux = aux->next;
+        i++;
+    }
+
+    return aux;  // pode ser NULL se index >= tamanho
+}
+
+// Remove e retorna o processo na posição 'index'
+struct proc * remove_at(struct queue *q, int index) {
+    if (index < 0) return NULL;
+
+    struct proc *aux = q->head;
+    int i = 0;
+
+    while (aux != NULL && i < index) {
+        aux = aux->next;
+        i++;
+    }
+
+    if (aux == NULL) return NULL;
+
+    // desconecta aux da lista
+    if (aux->prev != NULL)
+        aux->prev->next = aux->next;
+    else
+        q->head = aux->next;
+
+    if (aux->next != NULL)
+        aux->next->prev = aux->prev;
+    else
+        q->tail = aux->prev;
+
+    aux->prev = NULL;
+    aux->next = NULL;
+
+    return aux;
+}

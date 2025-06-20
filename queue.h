@@ -27,3 +27,6 @@ void printqueue(struct queue *q);
 // conta quantos elementos há em uma fila
 int countqueue(struct queue *q);
 
+int length(struct queue *q);
+struct proc * get(struct queue *q, int index);
+struct proc * remove_at(struct queue *q, int index);
