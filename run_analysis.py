@@ -8,7 +8,8 @@ executables = {
     "SJF": "./main_sjf",
     "LJF": "./main_ljf",
     "PRIO_STATIC": "./main_prio_static",
-    "PRIO_DYNAMIC": "./main_prio_dynamic"
+    "PRIO_DYNAMIC": "./main_prio_dynamic",
+    "PRIO_DYNAMIC_QUANTUM": "./main_prio_dynamic_quantum"
 }
 
 
