@@ -21,6 +21,7 @@ struct proc * scheduler(struct proc * current)
         if (current->state == BLOCKED) {
             current->queue = 0;
             enqueue(ready, current);
+            count_ready_in(current);
         } else if (current->state == READY) {
             // Simula quantum usado (substitua se tiver o campo correto)
             int quantum_usado = rand() % QUANTUM;
@@ -32,20 +33,28 @@ struct proc * scheduler(struct proc * current)
                 current->queue = 1;
                 enqueue(ready2, current);
             }
+            count_ready_in(current);
         } else if (current->state == FINISHED) {
             enqueue(finished, current);
+            count_finished_in(current);
         }
     }
 
     int prob = rand() % 100;
     if ((prob < 80 && !isempty(ready)) || isempty(ready2)) {
         selected = dequeue(ready);
-        if (selected)
+        if (selected) {
             selected->queue = 0;
+            count_ready_out(selected);
+            selected->state = RUNNING;
+        }
     } else if (!isempty(ready2)) {
         selected = dequeue(ready2);
-        if (selected)
+        if (selected) {
             selected->queue = 1;
+            count_ready_out(selected);
+            selected->state = RUNNING;
+        }
     }
 
     return selected;
