@@ -1,0 +1,448 @@
+# Algoritmo: PRIO_DYNAMIC
+# Num. processos: 10
+# Iteração: 2
+# Timestamp: 2025-06-22 12:58:47.910953
+
+[1 - 1750607927.899970] MAIN - Iniciando filas
+[2 - 1750607927.900026] MAIN - Iniciando os processos
+[3 - 1750607927.900168] PROC - Iniciando processo: 0 [59 u.t.]
+[4 - 1750607927.900199] PROC - Iniciando processo: 1 [4 u.t.]
+[5 - 1750607927.900279] PROC - Iniciando processo: 2 [99 u.t.]
+[6 - 1750607927.900314] PROC - Iniciando processo: 3 [86 u.t.]
+[7 - 1750607927.900322] PROC - Iniciando processo: 4 [8 u.t.]
+[8 - 1750607927.900398] PROC - Iniciando processo: 5 [14 u.t.]
+[9 - 1750607927.900441] PROC - Iniciando processo: 6 [75 u.t.]
+[10 - 1750607927.900498] PROC - Iniciando processo: 7 [6 u.t.]
+>> MAIN - imprimindo fila 'ready':
+	____________ FILA _____________
+	 head: 0
+	 tail: 9
+	_______________________________
+	| pid: 0
+	| state: READY
+	| queue: 0
+	| time_start: 1750607927.900030
+	| process_time: 0
+	| process_time_total: 59
+	| remaining_time: 59
+	| waiting_time: 0
+	| blocked_time: 0
+	| turnaround_time: 0
+	| num_ready: 1
+	| num_blocked: 0
+	| tid: 138996598437568
+	| prev: NULL
+	| next: 1
+	_______________________________
+	| pid: 1
+	| state: READY
+	| queue: 0
+	| time_start: 1750607927.900105
+	| process_time: 0
+	| process_time_total: 4
+	| remaining_time: 4
+	| waiting_time: 0
+	| blocked_time: 0
+	| turnaround_time: 0
+	| num_ready: 1
+	| num_blocked: 0
+	| tid: 138996590044864
+	| prev: 0
+	| next: 2
+	_______________________________
+	| pid: 2
+	| state: READY
+	| queue: 0
+	| time_start: 1750607927.900162
+	| process_time: 0
+	| process_time_total: 99
+	| remaining_time: 99
+	| waiting_time: 0
+	| blocked_time: 0
+	| turnaround_time: 0
+	| num_ready: 1
+	| num_blocked: 0
+	| tid: 138996581652160
+	| prev: 1
+	| next: 3
+	_______________________________
+	| pid: 3
+	| state: READY
+	| queue: 0
+	| time_start: 1750607927.900215
+	| process_time: 0
+	| process_time_total: 86
+	| remaining_time: 86
+	| waiting_time: 0
+	| blocked_time: 0
+	| turnaround_time: 0
+	| num_ready: 1
+	| num_blocked: 0
+	| tid: 138996573259456
+	| prev: 2
+	| next: 4
+	_______________________________
+	| pid: 4
+	| state: READY
+	| queue: 0
+	| time_start: 1750607927.900254
+	| process_time: 0
+	| process_time_total: 8
+	| remaining_time: 8
+	| waiting_time: 0
+	| blocked_time: 0
+	| turnaround_time: 0
+	| num_ready: 1
+	| num_blocked: 0
+	| tid: 138996564866752
+	| prev: 3
+	| next: 5
+	_______________________________
+	| pid: 5
+	| state: READY
+	| queue: 0
+	| time_start: 1750607927.900295
+	| process_time: 0
+	| process_time_total: 14
+	| remaining_time: 14
+	| waiting_time: 0
+	| blocked_time: 0
+	| turnaround_time: 0
+	| num_ready: 1
+	| num_blocked: 0
+	| tid: 138996556474048
+	| prev: 4
+	| next: 6
+	_______________________________
+	| pid: 6
+	| state: READY
+	| queue: 0
+	| time_start: 1750607927.900341
+[11 - 1750607927.900544] PROC - Iniciando processo: 8 [91 u.t.]
+	| process_time: 0
+	| process_time_total: 75
+	| remaining_time: 75
+	| waiting_time: 0
+	| blocked_time: 0
+	| turnaround_time: 0
+	| num_ready: 1
+	| num_blocked: 0
+	| tid: 138996548081344
+	| prev: 5
+	| next: 7
+	_______________________________
+	| pid: 7
+	| state: READY
+	| queue: 0
+	| time_start: 1750607927.900381
+	| process_time: 0
+	| process_time_total: 6
+	| remaining_time: 6
+	| waiting_time: 0
+	| blocked_time: 0
+	| turnaround_time: 0
+	| num_ready: 1
+	| num_blocked: 0
+	| tid: 138996539688640
+	| prev: 6
+	| next: 8
+	_______________________________
+	| pid: 8
+	| state: READY
+	| queue: 0
+	| time_start: 1750607927.900438
+	| process_time: 0
+	| process_time_total: 91
+	| remaining_time: 91
+	| waiting_time: 0
+	| blocked_time: 0
+	| turnaround_time: 0
+	| num_ready: 1
+	| num_blocked: 0
+	| tid: 138996531295936
+	| prev: 7
+	| next: 9
+	_______________________________
+	| pid: 9
+	| state: READY
+	| queue: 0
+	| time_start: 1750607927.900478
+	| process_time: 0
+	| process_time_total: 96
+	| remaining_time: 96
+	| waiting_time: 0
+	| blocked_time: 0
+	| turnaround_time: 0
+	| num_ready: 1
+	| num_blocked: 0
+	| tid: 138996522903232
+	| prev: 8
+	| next: NULL
+	_______________________________
+[12 - 1750607927.900562] MAIN - Iniciando o escalonador
+[13 - 1750607927.900575] PROC - Iniciando processo: 9 [96 u.t.]
+[14 - 1750607927.900657] SCHED -> Escalonador iniciando
+[15 - 1750607927.900663] SCHED -> Selecionado o processo: 0
+[16 - 1750607927.900751] PROC - Processo 0 executando
+[17 - 1750607927.900758] PROC - Processo 0 processando por 20 u.t. [39/59]
+[18 - 1750607927.900850] PROC - Processo 0 saiu por preempcao
+[19 - 1750607927.900907] SCHED -> Selecionado o processo: 1
+[20 - 1750607927.900977] PROC - Processo 1 executando
+[21 - 1750607927.900987] PROC - Processo 1 processando por 0 u.t. [4/4]
+[22 - 1750607927.901055] PROC - Processo 1 saindo por E/S
+[23 - 1750607927.901114] SCHED -> Selecionado o processo: 0
+[24 - 1750607927.901179] PROC - Processo 0 executando
+[25 - 1750607927.901186] PROC - Processo 0 processando por 20 u.t. [19/59]
+[26 - 1750607927.901270] PROC - Processo 0 saiu por preempcao
+[27 - 1750607927.901326] SCHED -> Selecionado o processo: 2
+[28 - 1750607927.901392] PROC - Processo 2 executando
+[29 - 1750607927.901399] PROC - Processo 2 processando por 20 u.t. [79/99]
+[30 - 1750607927.901482] PROC - Processo 2 saiu por preempcao
+[31 - 1750607927.901535] SCHED -> Selecionado o processo: 3
+[32 - 1750607927.901563] PROC - Processo 3 executando
+[33 - 1750607927.901568] PROC - Processo 3 processando por 20 u.t. [66/86]
+[34 - 1750607927.901650] PROC - Processo 3 saiu por preempcao
+[35 - 1750607927.901662] SCHED -> Selecionado o processo: 4
+[36 - 1750607927.901729] PROC - Processo 4 executando
+[37 - 1750607927.901751] PROC - Processo 4 processando por 7 u.t. [1/8]
+[38 - 1750607927.901829] PROC - Processo 4 saindo por E/S
+[39 - 1750607927.901849] SCHED -> Selecionado o processo: 0
+[40 - 1750607927.901911] PROC - Processo 0 executando
+[41 - 1750607927.901917] PROC - Processo 0 processando por 7 u.t. [12/59]
+[42 - 1750607927.901988] PROC - Processo 0 saindo por E/S
+[43 - 1750607927.901999] SCHED -> Selecionado o processo: 5
+[44 - 1750607927.902014] PROC - Processo 5 executando
+[45 - 1750607927.902016] PROC - Processo 5 processando por 13 u.t. [1/14]
+[46 - 1750607927.902092] PROC - Processo 5 saindo por E/S
+[47 - 1750607927.902103] SCHED -> Selecionado o processo: 2
+[48 - 1750607927.902160] PROC - Processo 2 executando
+[49 - 1750607927.902167] PROC - Processo 2 processando por 20 u.t. [59/99]
+[50 - 1750607927.902252] PROC - Processo 2 saiu por preempcao
+[51 - 1750607927.902267] SCHED -> Selecionado o processo: 6
+[52 - 1750607927.902333] PROC - Processo 6 executando
+[53 - 1750607927.902339] PROC - Processo 6 processando por 20 u.t. [55/75]
+[54 - 1750607927.902423] PROC - Processo 6 saiu por preempcao
+[55 - 1750607927.902443] SCHED -> Selecionado o processo: 7
+[56 - 1750607927.902462] PROC - Processo 7 executando
+[57 - 1750607927.902465] PROC - Processo 7 processando por 1 u.t. [5/6]
+[58 - 1750607927.902527] PROC - Processo 7 saindo por E/S
+[59 - 1750607927.902572] SCHED -> Selecionado o processo: 3
+[60 - 1750607927.902596] PROC - Processo 3 executando
+[61 - 1750607927.902598] PROC - Processo 3 processando por 20 u.t. [46/86]
+[62 - 1750607927.902678] PROC - Processo 3 saiu por preempcao
+[63 - 1750607927.902732] SCHED -> Selecionado o processo: 8
+[64 - 1750607927.902758] PROC - Processo 8 executando
+[65 - 1750607927.902761] PROC - Processo 8 processando por 20 u.t. [71/91]
+[66 - 1750607927.902840] PROC - Processo 8 saiu por preempcao
+[67 - 1750607927.902884] SCHED -> Selecionado o processo: 9
+[68 - 1750607927.902908] PROC - Processo 9 executando
+[69 - 1750607927.902910] PROC - Processo 9 processando por 16 u.t. [80/96]
+[70 - 1750607927.902986] PROC - Processo 9 saindo por E/S
+[71 - 1750607927.903034] SCHED -> Selecionado o processo: 1
+[72 - 1750607927.903107] PROC - Processo 1 executando
+[73 - 1750607927.903117] PROC - Processo 1 processando por 1 u.t. [3/4]
+[74 - 1750607927.903184] PROC - Processo 1 saindo por E/S
+[75 - 1750607927.903200] SCHED -> Selecionado o processo: 4
+[76 - 1750607927.903226] PROC - Processo 4 executando
+[77 - 1750607927.903233] PROC - Processo 4 processando por 1 u.t. [0/8]
+[78 - 1750607927.903348] PROC - Processo 4 finalizando
+[79 - 1750607927.903368] SCHED -> Selecionado o processo: 0
+[80 - 1750607927.903385] PROC - Processo 0 executando
+[81 - 1750607927.903387] PROC - Processo 0 processando por 5 u.t. [7/59]
+[82 - 1750607927.903421] PROC - Processo 0 saindo por E/S
+[83 - 1750607927.903484] SCHED -> Selecionado o processo: 5
+[84 - 1750607927.903548] PROC - Processo 5 executando
+[85 - 1750607927.903554] PROC - Processo 5 processando por 1 u.t. [0/14]
+[86 - 1750607927.903620] PROC - Processo 5 finalizando
+[87 - 1750607927.903665] SCHED -> Selecionado o processo: 7
+[88 - 1750607927.903689] PROC - Processo 7 executando
+[89 - 1750607927.903691] PROC - Processo 7 processando por 1 u.t. [4/6]
+[90 - 1750607927.903753] PROC - Processo 7 saindo por E/S
+[91 - 1750607927.903816] SCHED -> Selecionado o processo: 9
+[92 - 1750607927.903840] PROC - Processo 9 executando
+[93 - 1750607927.903842] PROC - Processo 9 processando por 20 u.t. [60/96]
+[94 - 1750607927.903922] PROC - Processo 9 saiu por preempcao
+[95 - 1750607927.903934] SCHED -> Selecionado o processo: 1
+[96 - 1750607927.903961] PROC - Processo 1 executando
+[97 - 1750607927.903971] PROC - Processo 1 processando por 1 u.t. [2/4]
+[98 - 1750607927.904043] PROC - Processo 1 saindo por E/S
+[99 - 1750607927.904064] SCHED -> Selecionado o processo: 2
+[100 - 1750607927.904083] PROC - Processo 2 executando
+[101 - 1750607927.904086] PROC - Processo 2 processando por 14 u.t. [45/99]
+[102 - 1750607927.904161] PROC - Processo 2 saindo por E/S
+[103 - 1750607927.904177] SCHED -> Selecionado o processo: 0
+[104 - 1750607927.904195] PROC - Processo 0 executando
+[105 - 1750607927.904198] PROC - Processo 0 processando por 7 u.t. [0/59]
+[106 - 1750607927.904265] PROC - Processo 0 finalizando
+[107 - 1750607927.904278] SCHED -> Selecionado o processo: 7
+[108 - 1750607927.904293] PROC - Processo 7 executando
+[109 - 1750607927.904296] PROC - Processo 7 processando por 1 u.t. [3/6]
+[110 - 1750607927.904357] PROC - Processo 7 saindo por E/S
+[111 - 1750607927.904367] SCHED -> Selecionado o processo: 6
+[112 - 1750607927.904383] PROC - Processo 6 executando
+[113 - 1750607927.904385] PROC - Processo 6 processando por 20 u.t. [35/75]
+[114 - 1750607927.904418] PROC - Processo 6 saiu por preempcao
+[115 - 1750607927.904449] SCHED -> Selecionado o processo: 1
+[116 - 1750607927.904513] PROC - Processo 1 executando
+[117 - 1750607927.904521] PROC - Processo 1 processando por 1 u.t. [1/4]
+[118 - 1750607927.904589] PROC - Processo 1 saindo por E/S
+[119 - 1750607927.904641] SCHED -> Selecionado o processo: 2
+[120 - 1750607927.904677] PROC - Processo 2 executando
+[121 - 1750607927.904684] PROC - Processo 2 processando por 1 u.t. [44/99]
+[122 - 1750607927.904750] PROC - Processo 2 saindo por E/S
+[123 - 1750607927.904798] SCHED -> Selecionado o processo: 7
+[124 - 1750607927.904864] PROC - Processo 7 executando
+[125 - 1750607927.904870] PROC - Processo 7 processando por 3 u.t. [0/6]
+[126 - 1750607927.904938] PROC - Processo 7 finalizando
+[127 - 1750607927.904984] SCHED -> Selecionado o processo: 1
+[128 - 1750607927.905012] PROC - Processo 1 executando
+[129 - 1750607927.905017] PROC - Processo 1 processando por 1 u.t. [0/4]
+[130 - 1750607927.905116] PROC - Processo 1 finalizando
+[131 - 1750607927.905174] SCHED -> Selecionado o processo: 2
+[132 - 1750607927.905253] PROC - Processo 2 executando
+[133 - 1750607927.905259] PROC - Processo 2 processando por 5 u.t. [39/99]
+[134 - 1750607927.905328] PROC - Processo 2 saindo por E/S
+[135 - 1750607927.905381] SCHED -> Selecionado o processo: 3
+[136 - 1750607927.905418] PROC - Processo 3 executando
+[137 - 1750607927.905424] PROC - Processo 3 processando por 1 u.t. [45/86]
+[138 - 1750607927.905486] PROC - Processo 3 saindo por E/S
+[139 - 1750607927.905541] SCHED -> Selecionado o processo: 2
+[140 - 1750607927.905604] PROC - Processo 2 executando
+[141 - 1750607927.905610] PROC - Processo 2 processando por 17 u.t. [22/99]
+[142 - 1750607927.905691] PROC - Processo 2 saindo por E/S
+[143 - 1750607927.905754] SCHED -> Selecionado o processo: 3
+[144 - 1750607927.905776] PROC - Processo 3 executando
+[145 - 1750607927.905778] PROC - Processo 3 processando por 18 u.t. [27/86]
+[146 - 1750607927.905855] PROC - Processo 3 saindo por E/S
+[147 - 1750607927.905908] SCHED -> Selecionado o processo: 8
+[148 - 1750607927.905979] PROC - Processo 8 executando
+[149 - 1750607927.905986] PROC - Processo 8 processando por 16 u.t. [55/91]
+[150 - 1750607927.906066] PROC - Processo 8 saindo por E/S
+[151 - 1750607927.906111] SCHED -> Selecionado o processo: 2
+[152 - 1750607927.906132] PROC - Processo 2 executando
+[153 - 1750607927.906134] PROC - Processo 2 processando por 1 u.t. [21/99]
+[154 - 1750607927.906195] PROC - Processo 2 saindo por E/S
+[155 - 1750607927.906243] SCHED -> Selecionado o processo: 3
+[156 - 1750607927.906266] PROC - Processo 3 executando
+[157 - 1750607927.906268] PROC - Processo 3 processando por 20 u.t. [7/86]
+[158 - 1750607927.906347] PROC - Processo 3 saiu por preempcao
+[159 - 1750607927.906394] SCHED -> Selecionado o processo: 9
+[160 - 1750607927.906418] PROC - Processo 9 executando
+[161 - 1750607927.906420] PROC - Processo 9 processando por 20 u.t. [40/96]
+[162 - 1750607927.906499] PROC - Processo 9 saiu por preempcao
+[163 - 1750607927.906571] SCHED -> Selecionado o processo: 8
+[164 - 1750607927.906651] PROC - Processo 8 executando
+[165 - 1750607927.906658] PROC - Processo 8 processando por 7 u.t. [48/91]
+[166 - 1750607927.906729] PROC - Processo 8 saindo por E/S
+[167 - 1750607927.906743] SCHED -> Selecionado o processo: 6
+[168 - 1750607927.906758] PROC - Processo 6 executando
+[169 - 1750607927.906760] PROC - Processo 6 processando por 18 u.t. [17/75]
+[170 - 1750607927.906837] PROC - Processo 6 saindo por E/S
+[171 - 1750607927.906847] SCHED -> Selecionado o processo: 2
+[172 - 1750607927.906896] PROC - Processo 2 executando
+[173 - 1750607927.906903] PROC - Processo 2 processando por 2 u.t. [19/99]
+[174 - 1750607927.906969] PROC - Processo 2 saindo por E/S
+[175 - 1750607927.906980] SCHED -> Selecionado o processo: 8
+[176 - 1750607927.907027] PROC - Processo 8 executando
+[177 - 1750607927.907034] PROC - Processo 8 processando por 14 u.t. [34/91]
+[178 - 1750607927.907112] PROC - Processo 8 saindo por E/S
+[179 - 1750607927.907122] SCHED -> Selecionado o processo: 6
+[180 - 1750607927.907135] PROC - Processo 6 executando
+[181 - 1750607927.907137] PROC - Processo 6 processando por 13 u.t. [4/75]
+[182 - 1750607927.907209] PROC - Processo 6 saindo por E/S
+[183 - 1750607927.907218] SCHED -> Selecionado o processo: 3
+[184 - 1750607927.907231] PROC - Processo 3 executando
+[185 - 1750607927.907233] PROC - Processo 3 processando por 1 u.t. [6/86]
+[186 - 1750607927.907293] PROC - Processo 3 saindo por E/S
+[187 - 1750607927.907303] SCHED -> Selecionado o processo: 2
+[188 - 1750607927.907358] PROC - Processo 2 executando
+[189 - 1750607927.907364] PROC - Processo 2 processando por 3 u.t. [16/99]
+[190 - 1750607927.907426] PROC - Processo 2 saindo por E/S
+[191 - 1750607927.907502] SCHED -> Selecionado o processo: 8
+[192 - 1750607927.907566] PROC - Processo 8 executando
+[193 - 1750607927.907572] PROC - Processo 8 processando por 20 u.t. [14/91]
+[194 - 1750607927.907656] PROC - Processo 8 saiu por preempcao
+[195 - 1750607927.907707] SCHED -> Selecionado o processo: 6
+[196 - 1750607927.907729] PROC - Processo 6 executando
+[197 - 1750607927.907731] PROC - Processo 6 processando por 1 u.t. [3/75]
+[198 - 1750607927.907791] PROC - Processo 6 saindo por E/S
+[199 - 1750607927.907855] SCHED -> Selecionado o processo: 9
+[200 - 1750607927.907877] PROC - Processo 9 executando
+[201 - 1750607927.907879] PROC - Processo 9 processando por 20 u.t. [20/96]
+[202 - 1750607927.907959] PROC - Processo 9 saiu por preempcao
+[203 - 1750607927.908015] SCHED -> Selecionado o processo: 3
+[204 - 1750607927.908036] PROC - Processo 3 executando
+[205 - 1750607927.908038] PROC - Processo 3 processando por 6 u.t. [0/86]
+[206 - 1750607927.908104] PROC - Processo 3 finalizando
+[207 - 1750607927.908115] SCHED -> Selecionado o processo: 2
+[208 - 1750607927.908170] PROC - Processo 2 executando
+[209 - 1750607927.908177] PROC - Processo 2 processando por 13 u.t. [3/99]
+[210 - 1750607927.908255] PROC - Processo 2 saindo por E/S
+[211 - 1750607927.908267] SCHED -> Selecionado o processo: 6
+[212 - 1750607927.908280] PROC - Processo 6 executando
+[213 - 1750607927.908288] PROC - Processo 6 processando por 2 u.t. [1/75]
+[214 - 1750607927.908351] PROC - Processo 6 saindo por E/S
+[215 - 1750607927.908403] SCHED -> Selecionado o processo: 2
+[216 - 1750607927.908493] PROC - Processo 2 executando
+[217 - 1750607927.908499] PROC - Processo 2 processando por 1 u.t. [2/99]
+[218 - 1750607927.908566] PROC - Processo 2 saindo por E/S
+[219 - 1750607927.908579] SCHED -> Selecionado o processo: 8
+[220 - 1750607927.908637] PROC - Processo 8 executando
+[221 - 1750607927.908643] PROC - Processo 8 processando por 10 u.t. [4/91]
+[222 - 1750607927.908717] PROC - Processo 8 saindo por E/S
+[223 - 1750607927.908731] SCHED -> Selecionado o processo: 6
+[224 - 1750607927.908747] PROC - Processo 6 executando
+[225 - 1750607927.908749] PROC - Processo 6 processando por 1 u.t. [0/75]
+[226 - 1750607927.908810] PROC - Processo 6 finalizando
+[227 - 1750607927.908821] SCHED -> Selecionado o processo: 9
+[228 - 1750607927.908834] PROC - Processo 9 executando
+[229 - 1750607927.908837] PROC - Processo 9 processando por 15 u.t. [5/96]
+[230 - 1750607927.908911] PROC - Processo 9 saindo por E/S
+[231 - 1750607927.908923] SCHED -> Selecionado o processo: 2
+[232 - 1750607927.908977] PROC - Processo 2 executando
+[233 - 1750607927.908983] PROC - Processo 2 processando por 1 u.t. [1/99]
+[234 - 1750607927.909049] PROC - Processo 2 saindo por E/S
+[235 - 1750607927.909062] SCHED -> Selecionado o processo: 8
+[236 - 1750607927.909115] PROC - Processo 8 executando
+[237 - 1750607927.909121] PROC - Processo 8 processando por 2 u.t. [2/91]
+[238 - 1750607927.909187] PROC - Processo 8 saindo por E/S
+[239 - 1750607927.909200] SCHED -> Selecionado o processo: 9
+[240 - 1750607927.909214] PROC - Processo 9 executando
+[241 - 1750607927.909216] PROC - Processo 9 processando por 1 u.t. [4/96]
+[242 - 1750607927.909277] PROC - Processo 9 saindo por E/S
+[243 - 1750607927.909287] SCHED -> Selecionado o processo: 2
+[244 - 1750607927.909343] PROC - Processo 2 executando
+[245 - 1750607927.909349] PROC - Processo 2 processando por 1 u.t. [0/99]
+[246 - 1750607927.909418] PROC - Processo 2 finalizando
+[247 - 1750607927.909430] SCHED -> Selecionado o processo: 8
+[248 - 1750607927.909500] PROC - Processo 8 executando
+[249 - 1750607927.909506] PROC - Processo 8 processando por 1 u.t. [1/91]
+[250 - 1750607927.909572] PROC - Processo 8 saindo por E/S
+[251 - 1750607927.909583] SCHED -> Selecionado o processo: 9
+[252 - 1750607927.909596] PROC - Processo 9 executando
+[253 - 1750607927.909598] PROC - Processo 9 processando por 1 u.t. [3/96]
+[254 - 1750607927.909659] PROC - Processo 9 saindo por E/S
+[255 - 1750607927.909672] SCHED -> Selecionado o processo: 8
+[256 - 1750607927.909721] PROC - Processo 8 executando
+[257 - 1750607927.909728] PROC - Processo 8 processando por 1 u.t. [0/91]
+[258 - 1750607927.909795] PROC - Processo 8 finalizando
+[259 - 1750607927.909809] SCHED -> Selecionado o processo: 9
+[260 - 1750607927.909824] PROC - Processo 9 executando
+[261 - 1750607927.909826] PROC - Processo 9 processando por 1 u.t. [2/96]
+[262 - 1750607927.909887] PROC - Processo 9 saindo por E/S
+[263 - 1750607927.909901] SCHED -> Selecionado o processo: 9
+[264 - 1750607927.909916] PROC - Processo 9 executando
+[265 - 1750607927.909918] PROC - Processo 9 processando por 1 u.t. [1/96]
+[266 - 1750607927.909979] PROC - Processo 9 saindo por E/S
+[267 - 1750607927.909992] SCHED -> Selecionado o processo: 9
+[268 - 1750607927.910006] PROC - Processo 9 executando
+[269 - 1750607927.910009] PROC - Processo 9 processando por 1 u.t. [0/96]
+[270 - 1750607927.910069] PROC - Processo 9 finalizando
+[271 - 1750607927.910080] SCHED -> Escalonador finalizando
+
+_________ ESTATISTICAS ________
+
+TME: 5514.700000
+TMB: 0.000000
+TMT: 6501.800000
+_______________________________
