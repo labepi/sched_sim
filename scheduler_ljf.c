@@ -1,24 +1,18 @@
 #include <stdio.h>
-
 #include "queue.h"
 #include "proc.h"
 #include "stats.h"
 #include "utils.h"
 
 extern struct queue * ready;
-extern struct queue * ready2;
 extern struct queue * blocked;
 extern struct queue * finished;
-extern int MAX_TIME;
 
-struct proc * scheduler(struct proc * current)
-{
+struct proc * scheduler(struct proc * current) {
     struct proc * selected = NULL;
 
-    if (current != NULL)
-    {
-        switch (current->state) 
-        {
+    if (current != NULL) {
+        switch (current->state) {
             case READY:
                 enqueue(ready, current);
                 count_ready_in(current);
@@ -36,23 +30,19 @@ struct proc * scheduler(struct proc * current)
         }
     }
 
-    if (isempty(ready))
-        return NULL;
+    if (isempty(ready)) return NULL;
 
-    int max_idx = -1;
-    int max_time = -1;
-    int qsize = length(ready);
-    for (int i = 0; i < qsize; i++) {
-        struct proc *p = get(ready, i);
-        if (p->remaining_time > max_time) {
+    int max_index = -1, max_time = -1, len = length(ready);
+    for (int i = 0; i < len; i++) {
+        struct proc * p = get(ready, i);
+        if (max_index == -1 || p->remaining_time > max_time) {
+            max_index = i;
             max_time = p->remaining_time;
-            max_idx = i;
         }
     }
 
-    selected = remove_at(ready, max_idx);
+    selected = remove_at(ready, max_index);
     count_ready_out(selected);
     selected->state = RUNNING;
-
     return selected;
 }

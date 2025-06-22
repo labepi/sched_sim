@@ -1,8 +1,9 @@
 import subprocess
 import statistics
 import os
+import sys
 
-# Algoritmos disponíveis e seus executáveis
+# Dicionário com os executáveis
 executables = {
     "FIFO": "./main_fifo",
     "SJF": "./main_sjf",
@@ -12,46 +13,45 @@ executables = {
     "PRIO_DYNAMIC_QUANTUM": "./main_prio_dynamic_quantum"
 }
 
+if len(sys.argv) != 3:
+    print("Uso: python3 run_analysis.py [ALG_NAME] [NUM_PROCESSOS]")
+    print("Exemplo: python3 run_analysis.py SJF 10")
+    sys.exit(1)
 
-proc_counts = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
-runs_per_setting = 10
+alg_name = sys.argv[1].upper()
+proc_count = int(sys.argv[2])
 
+if alg_name not in executables:
+    print(f"[ERRO] Algoritmo '{alg_name}' não encontrado.")
+    print("Algoritmos disponíveis:", ", ".join(executables.keys()))
+    sys.exit(1)
 
-# Resultados {algoritmo: {proc_count: [tmes]}}
-results = {alg: {} for alg in executables}
+exec_path = executables[alg_name]
+folder = f"data_{alg_name}"
+os.makedirs(folder, exist_ok=True)
+output_path = os.path.join(folder, f"tme_{proc_count}.txt")
 
-print("Iniciando simulações...\n")
+print(f"\n[INFO] Executando {alg_name} com {proc_count} processos (10 rodadas)...")
 
-for alg_name, exec_path in executables.items():
-    print(f"Executando algoritmo: {alg_name}")
-    for count in proc_counts:
-        tmes = []
-        for i in range(runs_per_setting):
-            try:
-                # Executa o simulador com o número de processos
-                output = subprocess.check_output([exec_path, str(count)], text=True)
+tmes = []
 
-                # Procura no output o valor do TME
-                for line in output.splitlines():
-                    if "TME:" in line:
-                        tme = float(line.split("TME:")[1].strip())
-                        tmes.append(tme)
-                        break
-            except Exception as e:
-                print(f"[Erro] Falha na execução de {alg_name} com {count} processos na rodada {i+1}: {e}")
+for i in range(10):
+    try:
+        print(f" -> Rodada {i+1}/10...")
+        output = subprocess.check_output([exec_path, str(proc_count)], text=True)
 
-        results[alg_name][count] = tmes
+        for line in output.splitlines():
+            if "TME:" in line:
+                tme = float(line.split("TME:")[1].strip())
+                tmes.append(tme)
+                break
 
-# Cálculo estatístico
-print("\nCalculando estatísticas...")
-stats_output = "resultados_tme.csv"
-with open(stats_output, "w") as f:
-    f.write("Algoritmo,Processos,Media,Variancia\n")
-    for alg_name, data in results.items():
-        for proc_count, samples in data.items():
-            if samples:
-                media = statistics.mean(samples)
-                var = statistics.variance(samples) if len(samples) > 1 else 0
-                f.write(f"{alg_name},{proc_count},{media},{var}\n")
+    except Exception as e:
+        print(f"[ERRO] Rodada {i+1} falhou: {e}")
 
-print(f"\nEstatísticas salvas em: {stats_output}")
+# Salva os TME em arquivo
+with open(output_path, "w") as f:
+    for tme in tmes:
+        f.write(f"{tme}\n")
+
+print(f"\n[OK] Resultados salvos em: {output_path}")
