@@ -18,9 +18,12 @@ struct proc * scheduler(struct proc * current) {
         if (current->state == BLOCKED) {
             current->queue = 0;
             enqueue(ready, current);
-            count_blocked_in(current);
+            count_ready_in(current);
         } else if (current->state == READY) {
-            if (current->process_time >= QUANTUM / 2) {
+            // Simula quantum usado (ajuste conforme seu campo real)
+            int quantum_usado = rand() % QUANTUM;
+
+            if (quantum_usado >= QUANTUM / 2) {
                 current->queue = 0;
                 enqueue(ready, current);
             } else {
@@ -34,16 +37,22 @@ struct proc * scheduler(struct proc * current) {
         }
     }
 
-    if (isempty(ready) && isempty(ready2)) return NULL;
+    if (isempty(ready) && isempty(ready2))
+        return NULL;
 
-    int r = rand() % 100;
-    int fila = (isempty(ready)) ? 1 : (isempty(ready2)) ? 0 : (r < 80 ? 0 : 1);
+    int prob = rand() % 100;
+    if ((prob < 80 && !isempty(ready)) || isempty(ready2)) {
+        selected = dequeue(ready);
+        if (selected) selected->queue = 0;
+    } else {
+        selected = dequeue(ready2);
+        if (selected) selected->queue = 1;
+    }
 
-    selected = (fila == 0) ? dequeue(ready) : dequeue(ready2);
     if (selected) {
-        selected->process_time = 0; // reset para novo ciclo
         count_ready_out(selected);
         selected->state = RUNNING;
     }
+
     return selected;
 }

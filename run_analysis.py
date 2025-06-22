@@ -1,9 +1,13 @@
 import subprocess
-import statistics
 import os
 import sys
+from datetime import datetime
 
-# Dicionário com os executáveis
+# ---------- USO ----------
+# python3 run_analysis.py <ALG_NAME> <NUM_PROC> <ITERACAO>
+# Exemplo: python3 run_analysis.py SJF 10 1
+# -------------------------
+
 executables = {
     "FIFO": "./main_fifo",
     "SJF": "./main_sjf",
@@ -13,45 +17,51 @@ executables = {
     "PRIO_DYNAMIC_QUANTUM": "./main_prio_dynamic_quantum"
 }
 
-if len(sys.argv) != 3:
-    print("Uso: python3 run_analysis.py [ALG_NAME] [NUM_PROCESSOS]")
-    print("Exemplo: python3 run_analysis.py SJF 10")
+# Verifica argumentos
+if len(sys.argv) != 4:
+    print("Uso: python3 run_analysis.py <ALG_NAME> <NUM_PROC> <ITERACAO>")
     sys.exit(1)
 
 alg_name = sys.argv[1].upper()
-proc_count = int(sys.argv[2])
+try:
+    nproc = int(sys.argv[2])
+    iter_num = int(sys.argv[3])
+except ValueError:
+    print("[Erro] Número de processos e iteração devem ser inteiros.")
+    sys.exit(1)
 
 if alg_name not in executables:
-    print(f"[ERRO] Algoritmo '{alg_name}' não encontrado.")
-    print("Algoritmos disponíveis:", ", ".join(executables.keys()))
+    print(f"[Erro] Algoritmo '{alg_name}' não reconhecido.")
     sys.exit(1)
 
 exec_path = executables[alg_name]
-folder = f"data_{alg_name}"
-os.makedirs(folder, exist_ok=True)
-output_path = os.path.join(folder, f"tme_{proc_count}.txt")
+output_folder = f"data_{alg_name}"
+filename = os.path.join(output_folder, f"tme_{nproc}_{iter_num}.txt")
 
-print(f"\n[INFO] Executando {alg_name} com {proc_count} processos (10 rodadas)...")
+os.makedirs(output_folder, exist_ok=True)
 
-tmes = []
+print(f"\n🚀 Executando {alg_name} com {nproc} processos (iter {iter_num})...")
 
-for i in range(10):
-    try:
-        print(f" -> Rodada {i+1}/10...")
-        output = subprocess.check_output([exec_path, str(proc_count)], text=True)
+try:
+    result = subprocess.check_output([exec_path, str(nproc)], text=True)
 
-        for line in output.splitlines():
+    tme_found = False
+    with open(filename, "w") as f:
+        f.write(f"# Algoritmo: {alg_name}\n")
+        f.write(f"# Num. processos: {nproc}\n")
+        f.write(f"# Iteração: {iter_num}\n")
+        f.write(f"# Timestamp: {datetime.now()}\n\n")
+
+        for line in result.splitlines():
+            f.write(line + "\n")
             if "TME:" in line:
                 tme = float(line.split("TME:")[1].strip())
-                tmes.append(tme)
-                break
+                tme_found = True
 
-    except Exception as e:
-        print(f"[ERRO] Rodada {i+1} falhou: {e}")
+        if not tme_found:
+            print("⚠️  [Aviso] TME não encontrado na saída!")
+        else:
+            print(f"✅ TME salvo em {filename}")
 
-# Salva os TME em arquivo
-with open(output_path, "w") as f:
-    for tme in tmes:
-        f.write(f"{tme}\n")
-
-print(f"\n[OK] Resultados salvos em: {output_path}")
+except subprocess.CalledProcessError as e:
+    print(f"[Erro] Falha na execução: {e}")

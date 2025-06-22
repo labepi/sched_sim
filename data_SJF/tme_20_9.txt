@@ -1,0 +1,1303 @@
+# Algoritmo: SJF
+# Num. processos: 20
+# Iteração: 9
+# Timestamp: 2025-06-22 12:11:13.666483
+
+[1 - 1750605073.642909] MAIN - Iniciando filas
+[2 - 1750605073.642964] MAIN - Iniciando os processos
+[4 - 1750605073.643148] PROC - Iniciando processo: 0 [93 u.t.]
+[4 - 1750605073.643145] PROC - Iniciando processo: 1 [24 u.t.]
+[5 - 1750605073.643224] PROC - Iniciando processo: 3 [61 u.t.]
+[6 - 1750605073.643258] PROC - Iniciando processo: 4 [69 u.t.]
+[7 - 1750605073.643353] PROC - Iniciando processo: 6 [20 u.t.]
+[8 - 1750605073.643399] PROC - Iniciando processo: 7 [89 u.t.]
+[9 - 1750605073.643467] PROC - Iniciando processo: 8 [80 u.t.]
+[10 - 1750605073.643508] PROC - Iniciando processo: 9 [73 u.t.]
+[11 - 1750605073.643522] PROC - Iniciando processo: 2 [71 u.t.]
+[12 - 1750605073.643538] PROC - Iniciando processo: 5 [68 u.t.]
+[13 - 1750605073.643640] PROC - Iniciando processo: 10 [52 u.t.]
+[15 - 1750605073.643651] PROC - Iniciando processo: 12 [41 u.t.]
+[15 - 1750605073.643656] PROC - Iniciando processo: 11 [98 u.t.]
+[16 - 1750605073.643745] PROC - Iniciando processo: 13 [100 u.t.]
+[17 - 1750605073.643768] PROC - Iniciando processo: 15 [56 u.t.]
+[18 - 1750605073.643776] PROC - Iniciando processo: 14 [41 u.t.]
+[19 - 1750605073.643855] PROC - Iniciando processo: 16 [63 u.t.]
+[20 - 1750605073.643900] PROC - Iniciando processo: 17 [88 u.t.]
+>> MAIN - imprimindo fila 'ready':
+	____________ FILA _____________
+	 head: 0
+	 tail: 19
+	_______________________________
+	| pid: 0
+	| state: READY
+	| queue: 0
+	| time_start: 1750605073.642968
+	| process_time: 0
+	| process_time_total: 93
+	| remaining_time: 93
+	| waiting_time: 0
+	| blocked_time: 0
+	| turnaround_time: 0
+	| num_ready: 1
+	| num_blocked: 0
+	| tid: 129016388384448
+	| prev: NULL
+	| next: 1
+	_______________________________
+	| pid: 1
+	| state: READY
+	| queue: 0
+	| time_start: 1750605073.643043
+	| process_time: 0
+	| process_time_total: 24
+	| remaining_time: 24
+	| waiting_time: 0
+	| blocked_time: 0
+	| turnaround_time: 0
+	| num_ready: 1
+	| num_blocked: 0
+	| tid: 129016379991744
+	| prev: 0
+	| next: 2
+	_______________________________
+	| pid: 2
+	| state: READY
+	| queue: 0
+	| time_start: 1750605073.643108
+	| process_time: 0
+	| process_time_total: 71
+	| remaining_time: 71
+	| waiting_time: 0
+	| blocked_time: 0
+	| turnaround_time: 0
+	| num_ready: 1
+	| num_blocked: 0
+	| tid: 129016371599040
+	| prev: 1
+	| next: 3
+	_______________________________
+	| pid: 3
+	| state: READY
+	| queue: 0
+	| time_start: 1750605073.643157
+	| process_time: 0
+	| process_time_total: 61
+	| remaining_time: 61
+	| waiting_time: 0
+	| blocked_time: 0
+	| turnaround_time: 0
+	| num_ready: 1
+	| num_blocked: 0
+	| tid: 129016363206336
+	| prev: 2
+	| next: 4
+	_______________________________
+	| pid: 4
+	| state: READY
+	| queue: 0
+	| time_start: 1750605073.643203
+	| process_time: 0
+	| process_time_total: 69
+	| remaining_time: 69
+	| waiting_time: 0
+	| blocked_time: 0
+	| turnaround_time: 0
+	| num_ready: 1
+	| num_blocked: 0
+	| tid: 129016354813632
+	| prev: 3
+	| next: 5
+	_______________________________
+	| pid: 5
+	| state: READY
+	| queue: 0
+	| time_start: 1750605073.643244
+	| process_time: 0
+	| process_time_total: 68
+	| remaining_time: 68
+	| waiting_time: 0
+	| blocked_time: 0
+	| turnaround_time: 0
+	| num_ready: 1
+	| num_blocked: 0
+	| tid: 129016346420928
+	| prev: 4
+	| next: 6
+	_______________________________
+	| pid: 6
+	| state: READY
+	| queue: 0
+	| time_start: 1750605073.643296
+	| process_time: 0
+	| process_time_total: 20
+	| remaining_time: 20
+	| waiting_time: 0
+	| blocked_time: 0
+	| turnaround_time: 0
+	| num_ready: 1
+	| num_blocked: 0
+	| tid: 129016338028224
+	| prev: 5
+	| next: 7
+	_______________________________
+	| pid: 7
+	| state: READY
+	| queue: 0
+	| time_start: 1750605073.643341
+	| process_time: 0
+	| process_time_total: 89
+	| remaining_time: 89
+	| waiting_time: 0
+	| blocked_time: 0
+	| turnaround_time: 0
+	| num_ready: 1
+	| num_blocked: 0
+	| tid: 129016329635520
+	| prev: 6
+	| next: 8
+	_______________________________
+	| pid: 8
+	| state: READY
+	| queue: 0
+	| time_start: 1750605073.643386
+	| process_time: 0
+	| process_time_total: 80
+	| remaining_time: 80
+	| waiting_time: 0
+	| blocked_time: 0
+	| turnaround_time: 0
+	| num_ready: 1
+	| num_blocked: 0
+	| tid: 129016321242816
+	| prev: 7
+	| next: 9
+	_______________________________
+	| pid: 9
+	| state: READY
+	| queue: 0
+	| time_start: 1750605073.643444
+	| process_time: 0
+	| process_time_total: 73
+	| remaining_time: 73
+	| waiting_time: 0
+	| blocked_time: 0
+	| turnaround_time: 0
+	| num_ready: 1
+	| num_blocked: 0
+	| tid: 129016312850112
+	| prev: 8
+	| next: 10
+	_______________________________
+	| pid: 10
+	| state: READY
+	| queue: 0
+	| time_start: 1750605073.643494
+	| process_time: 0
+	| process_time_total: 52
+	| remaining_time: 52
+	| waiting_time: 0
+	| blocked_time: 0
+	| turnaround_time: 0
+	| num_ready: 1
+	| num_blocked: 0
+	| tid: 129016304457408
+	| prev: 9
+	| next: 11
+	_______________________________
+	| pid: 11
+	| state: READY
+	| queue: 0
+[22 - 1750605073.643974] PROC - Iniciando processo: 19 [30 u.t.]
+	| time_start: 1750605073.643544
+[22 - 1750605073.643974] PROC - Iniciando processo: 18 [82 u.t.]
+	| process_time: 0
+	| process_time_total: 98
+	| remaining_time: 98
+	| waiting_time: 0
+	| blocked_time: 0
+	| turnaround_time: 0
+	| num_ready: 1
+	| num_blocked: 0
+	| tid: 129016296064704
+	| prev: 10
+	| next: 12
+	_______________________________
+	| pid: 12
+	| state: READY
+	| queue: 0
+	| time_start: 1750605073.643586
+	| process_time: 0
+	| process_time_total: 41
+	| remaining_time: 41
+	| waiting_time: 0
+	| blocked_time: 0
+	| turnaround_time: 0
+	| num_ready: 1
+	| num_blocked: 0
+	| tid: 129016287672000
+	| prev: 11
+	| next: 13
+	_______________________________
+	| pid: 13
+	| state: READY
+	| queue: 0
+	| time_start: 1750605073.643627
+	| process_time: 0
+	| process_time_total: 100
+	| remaining_time: 100
+	| waiting_time: 0
+	| blocked_time: 0
+	| turnaround_time: 0
+	| num_ready: 1
+	| num_blocked: 0
+	| tid: 129016279279296
+	| prev: 12
+	| next: 14
+	_______________________________
+	| pid: 14
+	| state: READY
+	| queue: 0
+	| time_start: 1750605073.643677
+	| process_time: 0
+	| process_time_total: 41
+	| remaining_time: 41
+	| waiting_time: 0
+	| blocked_time: 0
+	| turnaround_time: 0
+	| num_ready: 1
+	| num_blocked: 0
+	| tid: 129016270886592
+	| prev: 13
+	| next: 15
+	_______________________________
+	| pid: 15
+	| state: READY
+	| queue: 0
+	| time_start: 1750605073.643717
+	| process_time: 0
+	| process_time_total: 56
+	| remaining_time: 56
+	| waiting_time: 0
+	| blocked_time: 0
+	| turnaround_time: 0
+	| num_ready: 1
+	| num_blocked: 0
+	| tid: 129016262493888
+	| prev: 14
+	| next: 16
+	_______________________________
+	| pid: 16
+	| state: READY
+	| queue: 0
+	| time_start: 1750605073.643757
+	| process_time: 0
+	| process_time_total: 63
+	| remaining_time: 63
+	| waiting_time: 0
+	| blocked_time: 0
+	| turnaround_time: 0
+	| num_ready: 1
+	| num_blocked: 0
+	| tid: 129016254101184
+	| prev: 15
+	| next: 17
+	_______________________________
+	| pid: 17
+	| state: READY
+	| queue: 0
+	| time_start: 1750605073.643802
+	| process_time: 0
+	| process_time_total: 88
+	| remaining_time: 88
+	| waiting_time: 0
+	| blocked_time: 0
+	| turnaround_time: 0
+	| num_ready: 1
+	| num_blocked: 0
+	| tid: 129016245708480
+	| prev: 16
+	| next: 18
+	_______________________________
+	| pid: 18
+	| state: READY
+	| queue: 0
+	| time_start: 1750605073.643844
+	| process_time: 0
+	| process_time_total: 82
+	| remaining_time: 82
+	| waiting_time: 0
+	| blocked_time: 0
+	| turnaround_time: 0
+	| num_ready: 1
+	| num_blocked: 0
+	| tid: 129016237315776
+	| prev: 17
+	| next: 19
+	_______________________________
+	| pid: 19
+	| state: READY
+	| queue: 0
+	| time_start: 1750605073.643882
+	| process_time: 0
+	| process_time_total: 30
+	| remaining_time: 30
+	| waiting_time: 0
+	| blocked_time: 0
+	| turnaround_time: 0
+	| num_ready: 1
+	| num_blocked: 0
+	| tid: 129016228923072
+	| prev: 18
+	| next: NULL
+	_______________________________
+[23 - 1750605073.644035] MAIN - Iniciando o escalonador
+[24 - 1750605073.644109] SCHED -> Escalonador iniciando
+[25 - 1750605073.644118] SCHED -> Selecionado o processo: 6
+[26 - 1750605073.644155] PROC - Processo 6 executando
+[27 - 1750605073.644158] PROC - Processo 6 processando por 6 u.t. [14/20]
+[28 - 1750605073.644232] PROC - Processo 6 saindo por E/S
+[29 - 1750605073.644246] SCHED -> Selecionado o processo: 1
+[30 - 1750605073.644260] PROC - Processo 1 executando
+[31 - 1750605073.644271] PROC - Processo 1 processando por 1 u.t. [23/24]
+[32 - 1750605073.644358] PROC - Processo 1 saindo por E/S
+[33 - 1750605073.644433] SCHED -> Interrupcao ocorreu para o processo 6
+[34 - 1750605073.644444] SCHED -> Selecionado o processo: 6
+[35 - 1750605073.644472] PROC - Processo 6 executando
+[36 - 1750605073.644474] PROC - Processo 6 processando por 3 u.t. [11/20]
+[37 - 1750605073.644534] PROC - Processo 6 saindo por E/S
+[38 - 1750605073.644592] SCHED -> Interrupcao ocorreu para o processo 1
+[39 - 1750605073.644603] SCHED -> Selecionado o processo: 1
+[40 - 1750605073.644625] PROC - Processo 1 executando
+[41 - 1750605073.644627] PROC - Processo 1 processando por 12 u.t. [11/24]
+[42 - 1750605073.644698] PROC - Processo 1 saindo por E/S
+[43 - 1750605073.644721] SCHED -> Interrupcao nao occorreu!
+[44 - 1750605073.644730] SCHED -> Selecionado o processo: 19
+[45 - 1750605073.644810] PROC - Processo 19 executando
+[46 - 1750605073.644823] PROC - Processo 19 processando por 6 u.t. [24/30]
+[47 - 1750605073.644896] PROC - Processo 19 saindo por E/S
+[48 - 1750605073.644912] SCHED -> Interrupcao nao occorreu!
+[49 - 1750605073.644918] SCHED -> Selecionado o processo: 12
+[50 - 1750605073.644937] PROC - Processo 12 executando
+[51 - 1750605073.644941] PROC - Processo 12 processando por 20 u.t. [21/41]
+[52 - 1750605073.645023] PROC - Processo 12 saiu por preempcao
+[53 - 1750605073.645034] SCHED -> Interrupcao nao occorreu!
+[54 - 1750605073.645039] SCHED -> Selecionado o processo: 12
+[55 - 1750605073.645050] PROC - Processo 12 executando
+[56 - 1750605073.645052] PROC - Processo 12 processando por 4 u.t. [17/41]
+[57 - 1750605073.645115] PROC - Processo 12 saindo por E/S
+[58 - 1750605073.645125] SCHED -> Interrupcao nao occorreu!
+[59 - 1750605073.645129] SCHED -> Selecionado o processo: 14
+[60 - 1750605073.645151] PROC - Processo 14 executando
+[61 - 1750605073.645158] PROC - Processo 14 processando por 16 u.t. [25/41]
+[62 - 1750605073.645239] PROC - Processo 14 saindo por E/S
+[63 - 1750605073.645252] SCHED -> Interrupcao nao occorreu!
+[64 - 1750605073.645256] SCHED -> Selecionado o processo: 10
+[65 - 1750605073.645278] PROC - Processo 10 executando
+[66 - 1750605073.645286] PROC - Processo 10 processando por 4 u.t. [48/52]
+[67 - 1750605073.645356] PROC - Processo 10 saindo por E/S
+[68 - 1750605073.645370] SCHED -> Interrupcao ocorreu para o processo 6
+[69 - 1750605073.645375] SCHED -> Selecionado o processo: 6
+[70 - 1750605073.645394] PROC - Processo 6 executando
+[71 - 1750605073.645396] PROC - Processo 6 processando por 1 u.t. [10/20]
+[72 - 1750605073.645439] PROC - Processo 6 saindo por E/S
+[73 - 1750605073.645515] SCHED -> Interrupcao ocorreu para o processo 1
+[74 - 1750605073.645523] SCHED -> Selecionado o processo: 1
+[75 - 1750605073.645546] PROC - Processo 1 executando
+[76 - 1750605073.645548] PROC - Processo 1 processando por 5 u.t. [6/24]
+[77 - 1750605073.645611] PROC - Processo 1 saindo por E/S
+[78 - 1750605073.645662] SCHED -> Interrupcao nao occorreu!
+[79 - 1750605073.645670] SCHED -> Selecionado o processo: 15
+[80 - 1750605073.645688] PROC - Processo 15 executando
+[81 - 1750605073.645690] PROC - Processo 15 processando por 20 u.t. [36/56]
+[82 - 1750605073.645767] PROC - Processo 15 saiu por preempcao
+[83 - 1750605073.645820] SCHED -> Interrupcao nao occorreu!
+[84 - 1750605073.645828] SCHED -> Selecionado o processo: 15
+[85 - 1750605073.645849] PROC - Processo 15 executando
+[86 - 1750605073.645852] PROC - Processo 15 processando por 8 u.t. [28/56]
+[87 - 1750605073.645920] PROC - Processo 15 saindo por E/S
+[88 - 1750605073.645938] SCHED -> Interrupcao ocorreu para o processo 19
+[89 - 1750605073.645947] SCHED -> Selecionado o processo: 19
+[90 - 1750605073.646020] PROC - Processo 19 executando
+[91 - 1750605073.646028] PROC - Processo 19 processando por 3 u.t. [21/30]
+[92 - 1750605073.646097] PROC - Processo 19 saindo por E/S
+[93 - 1750605073.646161] SCHED -> Interrupcao ocorreu para o processo 12
+[94 - 1750605073.646169] SCHED -> Selecionado o processo: 12
+[95 - 1750605073.646194] PROC - Processo 12 executando
+[96 - 1750605073.646206] PROC - Processo 12 processando por 6 u.t. [11/41]
+[97 - 1750605073.646279] PROC - Processo 12 saindo por E/S
+[98 - 1750605073.646338] SCHED -> Interrupcao nao occorreu!
+[99 - 1750605073.646346] SCHED -> Selecionado o processo: 3
+[100 - 1750605073.646372] PROC - Processo 3 executando
+[101 - 1750605073.646375] PROC - Processo 3 processando por 20 u.t. [41/61]
+[102 - 1750605073.646420] PROC - Processo 3 saiu por preempcao
+[103 - 1750605073.646477] SCHED -> Interrupcao ocorreu para o processo 14
+[104 - 1750605073.646486] SCHED -> Selecionado o processo: 14
+[105 - 1750605073.646510] PROC - Processo 14 executando
+[106 - 1750605073.646514] PROC - Processo 14 processando por 5 u.t. [20/41]
+[107 - 1750605073.646586] PROC - Processo 14 saindo por E/S
+[108 - 1750605073.646635] SCHED -> Interrupcao nao occorreu!
+[109 - 1750605073.646643] SCHED -> Selecionado o processo: 3
+[110 - 1750605073.646662] PROC - Processo 3 executando
+[111 - 1750605073.646665] PROC - Processo 3 processando por 20 u.t. [21/61]
+[112 - 1750605073.646743] PROC - Processo 3 saiu por preempcao
+[113 - 1750605073.646802] SCHED -> Interrupcao nao occorreu!
+[114 - 1750605073.646811] SCHED -> Selecionado o processo: 3
+[115 - 1750605073.646832] PROC - Processo 3 executando
+[116 - 1750605073.646835] PROC - Processo 3 processando por 8 u.t. [13/61]
+[117 - 1750605073.646904] PROC - Processo 3 saindo por E/S
+[118 - 1750605073.646926] SCHED -> Interrupcao nao occorreu!
+[119 - 1750605073.646934] SCHED -> Selecionado o processo: 16
+[120 - 1750605073.647027] PROC - Processo 16 executando
+[121 - 1750605073.647040] PROC - Processo 16 processando por 1 u.t. [62/63]
+[122 - 1750605073.647113] PROC - Processo 16 saindo por E/S
+[123 - 1750605073.647134] SCHED -> Interrupcao ocorreu para o processo 10
+[124 - 1750605073.647141] SCHED -> Selecionado o processo: 10
+[125 - 1750605073.647161] PROC - Processo 10 executando
+[126 - 1750605073.647166] PROC - Processo 10 processando por 1 u.t. [47/52]
+[127 - 1750605073.647230] PROC - Processo 10 saindo por E/S
+[128 - 1750605073.647253] SCHED -> Interrupcao ocorreu para o processo 6
+[129 - 1750605073.647262] SCHED -> Selecionado o processo: 6
+[130 - 1750605073.647291] PROC - Processo 6 executando
+[131 - 1750605073.647295] PROC - Processo 6 processando por 0 u.t. [10/20]
+[132 - 1750605073.647356] PROC - Processo 6 saindo por E/S
+[133 - 1750605073.647369] SCHED -> Interrupcao ocorreu para o processo 1
+[134 - 1750605073.647374] SCHED -> Selecionado o processo: 1
+[135 - 1750605073.647389] PROC - Processo 1 executando
+[136 - 1750605073.647391] PROC - Processo 1 processando por 1 u.t. [5/24]
+[137 - 1750605073.647421] PROC - Processo 1 saindo por E/S
+[138 - 1750605073.647446] SCHED -> Interrupcao ocorreu para o processo 15
+[139 - 1750605073.647456] SCHED -> Selecionado o processo: 15
+[140 - 1750605073.647483] PROC - Processo 15 executando
+[141 - 1750605073.647486] PROC - Processo 15 processando por 20 u.t. [8/56]
+[142 - 1750605073.647566] PROC - Processo 15 saiu por preempcao
+[143 - 1750605073.647581] SCHED -> Interrupcao nao occorreu!
+[144 - 1750605073.647586] SCHED -> Selecionado o processo: 15
+[145 - 1750605073.647601] PROC - Processo 15 executando
+[146 - 1750605073.647603] PROC - Processo 15 processando por 1 u.t. [7/56]
+[147 - 1750605073.647661] PROC - Processo 15 saindo por E/S
+[148 - 1750605073.647673] SCHED -> Interrupcao nao occorreu!
+[149 - 1750605073.647677] SCHED -> Selecionado o processo: 5
+[150 - 1750605073.647703] PROC - Processo 5 executando
+[151 - 1750605073.647719] PROC - Processo 5 processando por 10 u.t. [58/68]
+[152 - 1750605073.647795] PROC - Processo 5 saindo por E/S
+[153 - 1750605073.647807] SCHED -> Interrupcao nao occorreu!
+[154 - 1750605073.647811] SCHED -> Selecionado o processo: 4
+[155 - 1750605073.647828] PROC - Processo 4 executando
+[156 - 1750605073.647831] PROC - Processo 4 processando por 20 u.t. [49/69]
+[157 - 1750605073.647910] PROC - Processo 4 saiu por preempcao
+[158 - 1750605073.647921] SCHED -> Interrupcao ocorreu para o processo 19
+[159 - 1750605073.647925] SCHED -> Selecionado o processo: 19
+[160 - 1750605073.647959] PROC - Processo 19 executando
+[161 - 1750605073.648056] PROC - Processo 19 processando por 3 u.t. [18/30]
+[162 - 1750605073.648127] PROC - Processo 19 saindo por E/S
+[163 - 1750605073.648150] SCHED -> Interrupcao nao occorreu!
+[164 - 1750605073.648156] SCHED -> Selecionado o processo: 4
+[165 - 1750605073.648171] PROC - Processo 4 executando
+[166 - 1750605073.648173] PROC - Processo 4 processando por 20 u.t. [29/69]
+[167 - 1750605073.648251] PROC - Processo 4 saiu por preempcao
+[168 - 1750605073.648261] SCHED -> Interrupcao ocorreu para o processo 12
+[169 - 1750605073.648264] SCHED -> Selecionado o processo: 12
+[170 - 1750605073.648327] PROC - Processo 12 executando
+[171 - 1750605073.648334] PROC - Processo 12 processando por 1 u.t. [10/41]
+[172 - 1750605073.648402] PROC - Processo 12 saindo por E/S
+[173 - 1750605073.648428] SCHED -> Interrupcao nao occorreu!
+[174 - 1750605073.648435] SCHED -> Selecionado o processo: 4
+[175 - 1750605073.648455] PROC - Processo 4 executando
+[176 - 1750605073.648456] PROC - Processo 4 processando por 4 u.t. [25/69]
+[177 - 1750605073.648517] PROC - Processo 4 saindo por E/S
+[178 - 1750605073.648530] SCHED -> Interrupcao ocorreu para o processo 14
+[179 - 1750605073.648534] SCHED -> Selecionado o processo: 14
+[180 - 1750605073.648605] PROC - Processo 14 executando
+[181 - 1750605073.648612] PROC - Processo 14 processando por 7 u.t. [13/41]
+[182 - 1750605073.648685] PROC - Processo 14 saindo por E/S
+[183 - 1750605073.648701] SCHED -> Interrupcao ocorreu para o processo 3
+[184 - 1750605073.648703] SCHED -> Selecionado o processo: 3
+[185 - 1750605073.648720] PROC - Processo 3 executando
+[186 - 1750605073.648724] PROC - Processo 3 processando por 4 u.t. [9/61]
+[187 - 1750605073.648789] PROC - Processo 3 saindo por E/S
+[188 - 1750605073.648801] SCHED -> Interrupcao ocorreu para o processo 16
+[189 - 1750605073.648803] SCHED -> Selecionado o processo: 16
+[190 - 1750605073.648875] PROC - Processo 16 executando
+[191 - 1750605073.648882] PROC - Processo 16 processando por 8 u.t. [54/63]
+[192 - 1750605073.648955] PROC - Processo 16 saindo por E/S
+[193 - 1750605073.648966] SCHED -> Interrupcao nao occorreu!
+[194 - 1750605073.648968] SCHED -> Selecionado o processo: 2
+[195 - 1750605073.648988] PROC - Processo 2 executando
+[196 - 1750605073.648995] PROC - Processo 2 processando por 20 u.t. [51/71]
+[197 - 1750605073.649079] PROC - Processo 2 saiu por preempcao
+[198 - 1750605073.649092] SCHED -> Interrupcao nao occorreu!
+[199 - 1750605073.649095] SCHED -> Selecionado o processo: 2
+[200 - 1750605073.649109] PROC - Processo 2 executando
+[201 - 1750605073.649112] PROC - Processo 2 processando por 20 u.t. [31/71]
+[202 - 1750605073.649192] PROC - Processo 2 saiu por preempcao
+[203 - 1750605073.649203] SCHED -> Interrupcao nao occorreu!
+[204 - 1750605073.649205] SCHED -> Selecionado o processo: 2
+[205 - 1750605073.649220] PROC - Processo 2 executando
+[206 - 1750605073.649223] PROC - Processo 2 processando por 1 u.t. [30/71]
+[207 - 1750605073.649289] PROC - Processo 2 saindo por E/S
+[208 - 1750605073.649299] SCHED -> Interrupcao ocorreu para o processo 10
+[209 - 1750605073.649302] SCHED -> Selecionado o processo: 10
+[210 - 1750605073.649321] PROC - Processo 10 executando
+[211 - 1750605073.649328] PROC - Processo 10 processando por 20 u.t. [27/52]
+[212 - 1750605073.649419] PROC - Processo 10 saiu por preempcao
+[213 - 1750605073.649431] SCHED -> Interrupcao ocorreu para o processo 6
+[214 - 1750605073.649434] SCHED -> Selecionado o processo: 6
+[215 - 1750605073.649451] PROC - Processo 6 executando
+[216 - 1750605073.649455] PROC - Processo 6 processando por 7 u.t. [3/20]
+[217 - 1750605073.649523] PROC - Processo 6 saindo por E/S
+[218 - 1750605073.649536] SCHED -> Interrupcao ocorreu para o processo 1
+[219 - 1750605073.649538] SCHED -> Selecionado o processo: 1
+[220 - 1750605073.649556] PROC - Processo 1 executando
+[221 - 1750605073.649559] PROC - Processo 1 processando por 1 u.t. [4/24]
+[222 - 1750605073.649621] PROC - Processo 1 saindo por E/S
+[223 - 1750605073.649633] SCHED -> Interrupcao nao occorreu!
+[224 - 1750605073.649643] SCHED -> Selecionado o processo: 10
+[225 - 1750605073.649696] PROC - Processo 10 executando
+[226 - 1750605073.649703] PROC - Processo 10 processando por 9 u.t. [18/52]
+[227 - 1750605073.649777] PROC - Processo 10 saindo por E/S
+[228 - 1750605073.649789] SCHED -> Interrupcao ocorreu para o processo 15
+[229 - 1750605073.649792] SCHED -> Selecionado o processo: 15
+[230 - 1750605073.649808] PROC - Processo 15 executando
+[231 - 1750605073.649811] PROC - Processo 15 processando por 1 u.t. [6/56]
+[232 - 1750605073.649872] PROC - Processo 15 saindo por E/S
+[233 - 1750605073.649883] SCHED -> Interrupcao nao occorreu!
+[234 - 1750605073.649886] SCHED -> Selecionado o processo: 9
+[235 - 1750605073.649900] PROC - Processo 9 executando
+[236 - 1750605073.649902] PROC - Processo 9 processando por 20 u.t. [53/73]
+[237 - 1750605073.649980] PROC - Processo 9 saiu por preempcao
+[238 - 1750605073.649991] SCHED -> Interrupcao nao occorreu!
+[239 - 1750605073.649993] SCHED -> Selecionado o processo: 9
+[240 - 1750605073.650005] PROC - Processo 9 executando
+[241 - 1750605073.650007] PROC - Processo 9 processando por 20 u.t. [33/73]
+[242 - 1750605073.650085] PROC - Processo 9 saiu por preempcao
+[243 - 1750605073.650095] SCHED -> Interrupcao ocorreu para o processo 5
+[244 - 1750605073.650098] SCHED -> Selecionado o processo: 9
+[245 - 1750605073.650110] PROC - Processo 9 executando
+[246 - 1750605073.650112] PROC - Processo 9 processando por 7 u.t. [26/73]
+[247 - 1750605073.650176] PROC - Processo 9 saindo por E/S
+[248 - 1750605073.650186] SCHED -> Interrupcao nao occorreu!
+[249 - 1750605073.650189] SCHED -> Selecionado o processo: 5
+[250 - 1750605073.650201] PROC - Processo 5 executando
+[251 - 1750605073.650203] PROC - Processo 5 processando por 2 u.t. [56/68]
+[252 - 1750605073.650263] PROC - Processo 5 saindo por E/S
+[253 - 1750605073.650274] SCHED -> Interrupcao ocorreu para o processo 19
+[254 - 1750605073.650277] SCHED -> Selecionado o processo: 19
+[255 - 1750605073.650296] PROC - Processo 19 executando
+[256 - 1750605073.650299] PROC - Processo 19 processando por 13 u.t. [5/30]
+[257 - 1750605073.650374] PROC - Processo 19 saindo por E/S
+[258 - 1750605073.650385] SCHED -> Interrupcao ocorreu para o processo 12
+[259 - 1750605073.650388] SCHED -> Selecionado o processo: 12
+[260 - 1750605073.650447] PROC - Processo 12 executando
+[261 - 1750605073.650454] PROC - Processo 12 processando por 5 u.t. [5/41]
+[262 - 1750605073.650523] PROC - Processo 12 saindo por E/S
+[263 - 1750605073.650535] SCHED -> Interrupcao nao occorreu!
+[264 - 1750605073.650538] SCHED -> Selecionado o processo: 8
+[265 - 1750605073.650557] PROC - Processo 8 executando
+[266 - 1750605073.650561] PROC - Processo 8 processando por 11 u.t. [69/80]
+[267 - 1750605073.650634] PROC - Processo 8 saindo por E/S
+[268 - 1750605073.650646] SCHED -> Interrupcao ocorreu para o processo 4
+[269 - 1750605073.650649] SCHED -> Selecionado o processo: 4
+[270 - 1750605073.650662] PROC - Processo 4 executando
+[271 - 1750605073.650664] PROC - Processo 4 processando por 0 u.t. [25/69]
+[272 - 1750605073.650721] PROC - Processo 4 saindo por E/S
+[273 - 1750605073.650732] SCHED -> Interrupcao ocorreu para o processo 14
+[274 - 1750605073.650735] SCHED -> Selecionado o processo: 14
+[275 - 1750605073.650751] PROC - Processo 14 executando
+[276 - 1750605073.650754] PROC - Processo 14 processando por 6 u.t. [7/41]
+[277 - 1750605073.650820] PROC - Processo 14 saindo por E/S
+[278 - 1750605073.650833] SCHED -> Interrupcao nao occorreu!
+[279 - 1750605073.650835] SCHED -> Selecionado o processo: 18
+[280 - 1750605073.650893] PROC - Processo 18 executando
+[281 - 1750605073.650899] PROC - Processo 18 processando por 20 u.t. [62/82]
+[282 - 1750605073.650986] PROC - Processo 18 saiu por preempcao
+[283 - 1750605073.650998] SCHED -> Interrupcao nao occorreu!
+[284 - 1750605073.651001] SCHED -> Selecionado o processo: 18
+[285 - 1750605073.651057] PROC - Processo 18 executando
+[286 - 1750605073.651064] PROC - Processo 18 processando por 20 u.t. [42/82]
+[287 - 1750605073.651159] PROC - Processo 18 saiu por preempcao
+[288 - 1750605073.651176] SCHED -> Interrupcao nao occorreu!
+[289 - 1750605073.651180] SCHED -> Selecionado o processo: 18
+[290 - 1750605073.651196] PROC - Processo 18 executando
+[291 - 1750605073.651198] PROC - Processo 18 processando por 20 u.t. [22/82]
+[292 - 1750605073.651280] PROC - Processo 18 saiu por preempcao
+[293 - 1750605073.651290] SCHED -> Interrupcao ocorreu para o processo 3
+[294 - 1750605073.651293] SCHED -> Selecionado o processo: 3
+[295 - 1750605073.651307] PROC - Processo 3 executando
+[296 - 1750605073.651311] PROC - Processo 3 processando por 7 u.t. [2/61]
+[297 - 1750605073.651377] PROC - Processo 3 saindo por E/S
+[298 - 1750605073.651387] SCHED -> Interrupcao ocorreu para o processo 16
+[299 - 1750605073.651389] SCHED -> Selecionado o processo: 18
+[300 - 1750605073.651402] PROC - Processo 18 executando
+[301 - 1750605073.651405] PROC - Processo 18 processando por 0 u.t. [22/82]
+[302 - 1750605073.651421] PROC - Processo 18 saindo por E/S
+[303 - 1750605073.651432] SCHED -> Interrupcao nao occorreu!
+[304 - 1750605073.651434] SCHED -> Selecionado o processo: 16
+[305 - 1750605073.651448] PROC - Processo 16 executando
+[306 - 1750605073.651450] PROC - Processo 16 processando por 2 u.t. [52/63]
+[307 - 1750605073.651513] PROC - Processo 16 saindo por E/S
+[308 - 1750605073.651522] SCHED -> Interrupcao ocorreu para o processo 2
+[309 - 1750605073.651524] SCHED -> Selecionado o processo: 2
+[310 - 1750605073.651540] PROC - Processo 2 executando
+[311 - 1750605073.651543] PROC - Processo 2 processando por 14 u.t. [16/71]
+[312 - 1750605073.651617] PROC - Processo 2 saindo por E/S
+[313 - 1750605073.651627] SCHED -> Interrupcao ocorreu para o processo 6
+[314 - 1750605073.651629] SCHED -> Selecionado o processo: 6
+[315 - 1750605073.651696] PROC - Processo 6 executando
+[316 - 1750605073.651702] PROC - Processo 6 processando por 1 u.t. [2/20]
+[317 - 1750605073.651769] PROC - Processo 6 saindo por E/S
+[318 - 1750605073.651781] SCHED -> Interrupcao ocorreu para o processo 1
+[319 - 1750605073.651784] SCHED -> Selecionado o processo: 1
+[320 - 1750605073.651813] PROC - Processo 1 executando
+[321 - 1750605073.651818] PROC - Processo 1 processando por 1 u.t. [3/24]
+[322 - 1750605073.651881] PROC - Processo 1 saindo por E/S
+[323 - 1750605073.651891] SCHED -> Interrupcao ocorreu para o processo 10
+[324 - 1750605073.651893] SCHED -> Selecionado o processo: 10
+[325 - 1750605073.651951] PROC - Processo 10 executando
+[326 - 1750605073.651957] PROC - Processo 10 processando por 10 u.t. [8/52]
+[327 - 1750605073.652032] PROC - Processo 10 saindo por E/S
+[328 - 1750605073.652044] SCHED -> Interrupcao ocorreu para o processo 15
+[329 - 1750605073.652047] SCHED -> Selecionado o processo: 15
+[330 - 1750605073.652059] PROC - Processo 15 executando
+[331 - 1750605073.652061] PROC - Processo 15 processando por 6 u.t. [0/56]
+[332 - 1750605073.652124] PROC - Processo 15 finalizando
+[333 - 1750605073.652134] SCHED -> Interrupcao ocorreu para o processo 9
+[334 - 1750605073.652137] SCHED -> Selecionado o processo: 9
+[335 - 1750605073.652155] PROC - Processo 9 executando
+[336 - 1750605073.652158] PROC - Processo 9 processando por 20 u.t. [6/73]
+[337 - 1750605073.652239] PROC - Processo 9 saiu por preempcao
+[338 - 1750605073.652249] SCHED -> Interrupcao nao occorreu!
+[339 - 1750605073.652251] SCHED -> Selecionado o processo: 9
+[340 - 1750605073.652263] PROC - Processo 9 executando
+[341 - 1750605073.652265] PROC - Processo 9 processando por 1 u.t. [5/73]
+[342 - 1750605073.652326] PROC - Processo 9 saindo por E/S
+[343 - 1750605073.652335] SCHED -> Interrupcao ocorreu para o processo 5
+[344 - 1750605073.652338] SCHED -> Selecionado o processo: 5
+[345 - 1750605073.652355] PROC - Processo 5 executando
+[346 - 1750605073.652359] PROC - Processo 5 processando por 19 u.t. [37/68]
+[347 - 1750605073.652419] PROC - Processo 5 saindo por E/S
+[348 - 1750605073.652430] SCHED -> Interrupcao ocorreu para o processo 19
+[349 - 1750605073.652433] SCHED -> Selecionado o processo: 19
+[350 - 1750605073.652452] PROC - Processo 19 executando
+[351 - 1750605073.652471] PROC - Processo 19 processando por 2 u.t. [3/30]
+[352 - 1750605073.652535] PROC - Processo 19 saindo por E/S
+[353 - 1750605073.652546] SCHED -> Interrupcao nao occorreu!
+[354 - 1750605073.652549] SCHED -> Selecionado o processo: 17
+[355 - 1750605073.652606] PROC - Processo 17 executando
+[356 - 1750605073.652612] PROC - Processo 17 processando por 20 u.t. [68/88]
+[357 - 1750605073.652697] PROC - Processo 17 saiu por preempcao
+[358 - 1750605073.652708] SCHED -> Interrupcao nao occorreu!
+[359 - 1750605073.652710] SCHED -> Selecionado o processo: 17
+[360 - 1750605073.652724] PROC - Processo 17 executando
+[361 - 1750605073.652726] PROC - Processo 17 processando por 20 u.t. [48/88]
+[362 - 1750605073.652807] PROC - Processo 17 saiu por preempcao
+[363 - 1750605073.652819] SCHED -> Interrupcao ocorreu para o processo 12
+[364 - 1750605073.652821] SCHED -> Selecionado o processo: 12
+[365 - 1750605073.652836] PROC - Processo 12 executando
+[366 - 1750605073.652838] PROC - Processo 12 processando por 3 u.t. [2/41]
+[367 - 1750605073.652902] PROC - Processo 12 saindo por E/S
+[368 - 1750605073.652912] SCHED -> Interrupcao ocorreu para o processo 8
+[369 - 1750605073.652915] SCHED -> Selecionado o processo: 17
+[370 - 1750605073.652928] PROC - Processo 17 executando
+[371 - 1750605073.652931] PROC - Processo 17 processando por 18 u.t. [30/88]
+[372 - 1750605073.653008] PROC - Processo 17 saindo por E/S
+[373 - 1750605073.653018] SCHED -> Interrupcao nao occorreu!
+[374 - 1750605073.653021] SCHED -> Selecionado o processo: 8
+[375 - 1750605073.653081] PROC - Processo 8 executando
+[376 - 1750605073.653089] PROC - Processo 8 processando por 20 u.t. [49/80]
+[377 - 1750605073.653175] PROC - Processo 8 saiu por preempcao
+[378 - 1750605073.653194] SCHED -> Interrupcao ocorreu para o processo 4
+[379 - 1750605073.653198] SCHED -> Selecionado o processo: 4
+[380 - 1750605073.653217] PROC - Processo 4 executando
+[381 - 1750605073.653220] PROC - Processo 4 processando por 5 u.t. [20/69]
+[382 - 1750605073.653282] PROC - Processo 4 saindo por E/S
+[383 - 1750605073.653293] SCHED -> Interrupcao ocorreu para o processo 14
+[384 - 1750605073.653296] SCHED -> Selecionado o processo: 14
+[385 - 1750605073.653314] PROC - Processo 14 executando
+[386 - 1750605073.653318] PROC - Processo 14 processando por 1 u.t. [6/41]
+[387 - 1750605073.653380] PROC - Processo 14 saindo por E/S
+[388 - 1750605073.653399] SCHED -> Interrupcao nao occorreu!
+[389 - 1750605073.653407] SCHED -> Selecionado o processo: 8
+[390 - 1750605073.653448] PROC - Processo 8 executando
+[391 - 1750605073.653454] PROC - Processo 8 processando por 20 u.t. [29/80]
+[392 - 1750605073.653539] PROC - Processo 8 saiu por preempcao
+[393 - 1750605073.653551] SCHED -> Interrupcao nao occorreu!
+[394 - 1750605073.653555] SCHED -> Selecionado o processo: 8
+[395 - 1750605073.653569] PROC - Processo 8 executando
+[396 - 1750605073.653571] PROC - Processo 8 processando por 20 u.t. [9/80]
+[397 - 1750605073.653651] PROC - Processo 8 saiu por preempcao
+[398 - 1750605073.653660] SCHED -> Interrupcao nao occorreu!
+[399 - 1750605073.653663] SCHED -> Selecionado o processo: 8
+[400 - 1750605073.653675] PROC - Processo 8 executando
+[401 - 1750605073.653677] PROC - Processo 8 processando por 9 u.t. [0/80]
+[402 - 1750605073.653745] PROC - Processo 8 finalizando
+[403 - 1750605073.653755] SCHED -> Interrupcao ocorreu para o processo 3
+[404 - 1750605073.653758] SCHED -> Selecionado o processo: 3
+[405 - 1750605073.653788] PROC - Processo 3 executando
+[406 - 1750605073.653794] PROC - Processo 3 processando por 1 u.t. [1/61]
+[407 - 1750605073.653856] PROC - Processo 3 saindo por E/S
+[408 - 1750605073.653867] SCHED -> Interrupcao nao occorreu!
+[409 - 1750605073.653870] SCHED -> Selecionado o processo: 7
+[410 - 1750605073.653894] PROC - Processo 7 executando
+[411 - 1750605073.653899] PROC - Processo 7 processando por 20 u.t. [69/89]
+[412 - 1750605073.653981] PROC - Processo 7 saiu por preempcao
+[413 - 1750605073.653994] SCHED -> Interrupcao ocorreu para o processo 18
+[414 - 1750605073.653997] SCHED -> Selecionado o processo: 18
+[415 - 1750605073.654028] PROC - Processo 18 executando
+[416 - 1750605073.654034] PROC - Processo 18 processando por 7 u.t. [15/82]
+[417 - 1750605073.654103] PROC - Processo 18 saindo por E/S
+[418 - 1750605073.654117] SCHED -> Interrupcao nao occorreu!
+[419 - 1750605073.654120] SCHED -> Selecionado o processo: 7
+[420 - 1750605073.654134] PROC - Processo 7 executando
+[421 - 1750605073.654136] PROC - Processo 7 processando por 1 u.t. [68/89]
+[422 - 1750605073.654195] PROC - Processo 7 saindo por E/S
+[423 - 1750605073.654206] SCHED -> Interrupcao ocorreu para o processo 16
+[424 - 1750605073.654209] SCHED -> Selecionado o processo: 16
+[425 - 1750605073.654226] PROC - Processo 16 executando
+[426 - 1750605073.654229] PROC - Processo 16 processando por 20 u.t. [32/63]
+[427 - 1750605073.654309] PROC - Processo 16 saiu por preempcao
+[428 - 1750605073.654322] SCHED -> Interrupcao nao occorreu!
+[429 - 1750605073.654324] SCHED -> Selecionado o processo: 16
+[430 - 1750605073.654339] PROC - Processo 16 executando
+[431 - 1750605073.654342] PROC - Processo 16 processando por 13 u.t. [19/63]
+[432 - 1750605073.654423] PROC - Processo 16 saindo por E/S
+[433 - 1750605073.654445] SCHED -> Interrupcao ocorreu para o processo 2
+[434 - 1750605073.654449] SCHED -> Selecionado o processo: 2
+[435 - 1750605073.654468] PROC - Processo 2 executando
+[436 - 1750605073.654471] PROC - Processo 2 processando por 1 u.t. [15/71]
+[437 - 1750605073.654533] PROC - Processo 2 saindo por E/S
+[438 - 1750605073.654548] SCHED -> Interrupcao ocorreu para o processo 6
+[439 - 1750605073.654551] SCHED -> Selecionado o processo: 6
+[440 - 1750605073.654609] PROC - Processo 6 executando
+[441 - 1750605073.654617] PROC - Processo 6 processando por 1 u.t. [1/20]
+[442 - 1750605073.654694] PROC - Processo 6 saindo por E/S
+[443 - 1750605073.654714] SCHED -> Interrupcao ocorreu para o processo 1
+[444 - 1750605073.654717] SCHED -> Selecionado o processo: 1
+[445 - 1750605073.654744] PROC - Processo 1 executando
+[446 - 1750605073.654750] PROC - Processo 1 processando por 1 u.t. [2/24]
+[447 - 1750605073.654815] PROC - Processo 1 saindo por E/S
+[448 - 1750605073.654827] SCHED -> Interrupcao nao occorreu!
+[449 - 1750605073.654830] SCHED -> Selecionado o processo: 0
+[450 - 1750605073.654849] PROC - Processo 0 executando
+[451 - 1750605073.654853] PROC - Processo 0 processando por 20 u.t. [73/93]
+[452 - 1750605073.654941] PROC - Processo 0 saiu por preempcao
+[453 - 1750605073.654958] SCHED -> Interrupcao nao occorreu!
+[454 - 1750605073.654962] SCHED -> Selecionado o processo: 0
+[455 - 1750605073.654985] PROC - Processo 0 executando
+[456 - 1750605073.654988] PROC - Processo 0 processando por 20 u.t. [53/93]
+[457 - 1750605073.655070] PROC - Processo 0 saiu por preempcao
+[458 - 1750605073.655082] SCHED -> Interrupcao nao occorreu!
+[459 - 1750605073.655085] SCHED -> Selecionado o processo: 0
+[460 - 1750605073.655099] PROC - Processo 0 executando
+[461 - 1750605073.655102] PROC - Processo 0 processando por 12 u.t. [41/93]
+[462 - 1750605073.655175] PROC - Processo 0 saindo por E/S
+[463 - 1750605073.655187] SCHED -> Interrupcao ocorreu para o processo 10
+[464 - 1750605073.655191] SCHED -> Selecionado o processo: 10
+[465 - 1750605073.655214] PROC - Processo 10 executando
+[466 - 1750605073.655217] PROC - Processo 10 processando por 1 u.t. [7/52]
+[467 - 1750605073.655280] PROC - Processo 10 saindo por E/S
+[468 - 1750605073.655293] SCHED -> Interrupcao nao occorreu!
+[469 - 1750605073.655296] SCHED -> Selecionado o processo: 11
+[470 - 1750605073.655315] PROC - Processo 11 executando
+[471 - 1750605073.655319] PROC - Processo 11 processando por 20 u.t. [78/98]
+[472 - 1750605073.655399] PROC - Processo 11 saiu por preempcao
+[473 - 1750605073.655418] SCHED -> Interrupcao ocorreu para o processo 9
+[474 - 1750605073.655422] SCHED -> Selecionado o processo: 9
+[475 - 1750605073.655447] PROC - Processo 9 executando
+[476 - 1750605073.655454] PROC - Processo 9 processando por 5 u.t. [0/73]
+[477 - 1750605073.655523] PROC - Processo 9 finalizando
+[478 - 1750605073.655538] SCHED -> Interrupcao nao occorreu!
+[479 - 1750605073.655548] SCHED -> Selecionado o processo: 11
+[480 - 1750605073.655573] PROC - Processo 11 executando
+[481 - 1750605073.655577] PROC - Processo 11 processando por 20 u.t. [58/98]
+[482 - 1750605073.655659] PROC - Processo 11 saiu por preempcao
+[483 - 1750605073.655671] SCHED -> Interrupcao nao occorreu!
+[484 - 1750605073.655675] SCHED -> Selecionado o processo: 11
+[485 - 1750605073.655690] PROC - Processo 11 executando
+[486 - 1750605073.655692] PROC - Processo 11 processando por 16 u.t. [42/98]
+[487 - 1750605073.655774] PROC - Processo 11 saindo por E/S
+[488 - 1750605073.655791] SCHED -> Interrupcao ocorreu para o processo 5
+[489 - 1750605073.655796] SCHED -> Selecionado o processo: 5
+[490 - 1750605073.655821] PROC - Processo 5 executando
+[491 - 1750605073.655827] PROC - Processo 5 processando por 20 u.t. [17/68]
+[492 - 1750605073.655906] PROC - Processo 5 saiu por preempcao
+[493 - 1750605073.655916] SCHED -> Interrupcao ocorreu para o processo 19
+[494 - 1750605073.655919] SCHED -> Selecionado o processo: 19
+[495 - 1750605073.655937] PROC - Processo 19 executando
+[496 - 1750605073.655941] PROC - Processo 19 processando por 1 u.t. [2/30]
+[497 - 1750605073.656008] PROC - Processo 19 saindo por E/S
+[498 - 1750605073.656023] SCHED -> Interrupcao ocorreu para o processo 12
+[499 - 1750605073.656028] SCHED -> Selecionado o processo: 12
+[500 - 1750605073.656050] PROC - Processo 12 executando
+[501 - 1750605073.656055] PROC - Processo 12 processando por 1 u.t. [1/41]
+[502 - 1750605073.656118] PROC - Processo 12 saindo por E/S
+[503 - 1750605073.656131] SCHED -> Interrupcao nao occorreu!
+[504 - 1750605073.656134] SCHED -> Selecionado o processo: 5
+[505 - 1750605073.656149] PROC - Processo 5 executando
+[506 - 1750605073.656151] PROC - Processo 5 processando por 16 u.t. [1/68]
+[507 - 1750605073.656224] PROC - Processo 5 saindo por E/S
+[508 - 1750605073.656235] SCHED -> Interrupcao nao occorreu!
+[509 - 1750605073.656238] SCHED -> Selecionado o processo: 13
+[510 - 1750605073.656263] PROC - Processo 13 executando
+[511 - 1750605073.656266] PROC - Processo 13 processando por 20 u.t. [80/100]
+[512 - 1750605073.656349] PROC - Processo 13 saiu por preempcao
+[513 - 1750605073.656366] SCHED -> Interrupcao ocorreu para o processo 17
+[514 - 1750605073.656370] SCHED -> Selecionado o processo: 17
+[515 - 1750605073.656393] PROC - Processo 17 executando
+[516 - 1750605073.656396] PROC - Processo 17 processando por 8 u.t. [22/88]
+[517 - 1750605073.656421] PROC - Processo 17 saindo por E/S
+[518 - 1750605073.656436] SCHED -> Interrupcao ocorreu para o processo 4
+[519 - 1750605073.656440] SCHED -> Selecionado o processo: 4
+[520 - 1750605073.656457] PROC - Processo 4 executando
+[521 - 1750605073.656460] PROC - Processo 4 processando por 7 u.t. [13/69]
+[522 - 1750605073.656525] PROC - Processo 4 saindo por E/S
+[523 - 1750605073.656536] SCHED -> Interrupcao nao occorreu!
+[524 - 1750605073.656539] SCHED -> Selecionado o processo: 13
+[525 - 1750605073.656557] PROC - Processo 13 executando
+[526 - 1750605073.656560] PROC - Processo 13 processando por 2 u.t. [78/100]
+[527 - 1750605073.656625] PROC - Processo 13 saindo por E/S
+[528 - 1750605073.656637] SCHED -> Interrupcao ocorreu para o processo 14
+[529 - 1750605073.656640] SCHED -> Selecionado o processo: 14
+[530 - 1750605073.656658] PROC - Processo 14 executando
+[531 - 1750605073.656661] PROC - Processo 14 processando por 1 u.t. [5/41]
+[532 - 1750605073.656724] PROC - Processo 14 saindo por E/S
+[533 - 1750605073.656736] SCHED -> Interrupcao nao occorreu!
+[534 - 1750605073.656739] SCHED -> Interrupcao nao occorreu!
+[535 - 1750605073.656741] SCHED -> Interrupcao nao occorreu!
+[536 - 1750605073.656742] SCHED -> Interrupcao nao occorreu!
+[537 - 1750605073.656743] SCHED -> Interrupcao nao occorreu!
+[538 - 1750605073.656744] SCHED -> Interrupcao ocorreu para o processo 3
+[539 - 1750605073.656746] SCHED -> Selecionado o processo: 3
+[540 - 1750605073.656777] PROC - Processo 3 executando
+[541 - 1750605073.656783] PROC - Processo 3 processando por 1 u.t. [0/61]
+[542 - 1750605073.656846] PROC - Processo 3 finalizando
+[543 - 1750605073.656866] SCHED -> Interrupcao nao occorreu!
+[544 - 1750605073.656869] SCHED -> Interrupcao nao occorreu!
+[545 - 1750605073.656870] SCHED -> Interrupcao nao occorreu!
+[546 - 1750605073.656872] SCHED -> Interrupcao ocorreu para o processo 18
+[547 - 1750605073.656873] SCHED -> Selecionado o processo: 18
+[548 - 1750605073.656892] PROC - Processo 18 executando
+[549 - 1750605073.656895] PROC - Processo 18 processando por 10 u.t. [5/82]
+[550 - 1750605073.656967] PROC - Processo 18 saindo por E/S
+[551 - 1750605073.656980] SCHED -> Interrupcao nao occorreu!
+[552 - 1750605073.656983] SCHED -> Interrupcao ocorreu para o processo 7
+[553 - 1750605073.656984] SCHED -> Selecionado o processo: 7
+[554 - 1750605073.657010] PROC - Processo 7 executando
+[555 - 1750605073.657016] PROC - Processo 7 processando por 1 u.t. [67/89]
+[556 - 1750605073.657079] PROC - Processo 7 saindo por E/S
+[557 - 1750605073.657089] SCHED -> Interrupcao nao occorreu!
+[558 - 1750605073.657092] SCHED -> Interrupcao nao occorreu!
+[559 - 1750605073.657093] SCHED -> Interrupcao nao occorreu!
+[560 - 1750605073.657094] SCHED -> Interrupcao nao occorreu!
+[561 - 1750605073.657096] SCHED -> Interrupcao ocorreu para o processo 16
+[562 - 1750605073.657097] SCHED -> Selecionado o processo: 16
+[563 - 1750605073.657113] PROC - Processo 16 executando
+[564 - 1750605073.657115] PROC - Processo 16 processando por 6 u.t. [13/63]
+[565 - 1750605073.657181] PROC - Processo 16 saindo por E/S
+[566 - 1750605073.657194] SCHED -> Interrupcao ocorreu para o processo 2
+[567 - 1750605073.657197] SCHED -> Selecionado o processo: 2
+[568 - 1750605073.657213] PROC - Processo 2 executando
+[569 - 1750605073.657216] PROC - Processo 2 processando por 10 u.t. [5/71]
+[570 - 1750605073.657286] PROC - Processo 2 saindo por E/S
+[571 - 1750605073.657297] SCHED -> Interrupcao nao occorreu!
+[572 - 1750605073.657300] SCHED -> Interrupcao ocorreu para o processo 6
+[573 - 1750605073.657301] SCHED -> Selecionado o processo: 6
+[574 - 1750605073.657323] PROC - Processo 6 executando
+[575 - 1750605073.657330] PROC - Processo 6 processando por 1 u.t. [0/20]
+[576 - 1750605073.657437] PROC - Processo 6 finalizando
+[577 - 1750605073.657456] SCHED -> Interrupcao nao occorreu!
+[578 - 1750605073.657459] SCHED -> Interrupcao nao occorreu!
+[579 - 1750605073.657460] SCHED -> Interrupcao nao occorreu!
+[580 - 1750605073.657461] SCHED -> Interrupcao nao occorreu!
+[581 - 1750605073.657462] SCHED -> Interrupcao nao occorreu!
+[582 - 1750605073.657464] SCHED -> Interrupcao ocorreu para o processo 1
+[583 - 1750605073.657465] SCHED -> Selecionado o processo: 1
+[584 - 1750605073.657480] PROC - Processo 1 executando
+[585 - 1750605073.657482] PROC - Processo 1 processando por 1 u.t. [1/24]
+[586 - 1750605073.657540] PROC - Processo 1 saindo por E/S
+[587 - 1750605073.657549] SCHED -> Interrupcao nao occorreu!
+[588 - 1750605073.657551] SCHED -> Interrupcao nao occorreu!
+[589 - 1750605073.657553] SCHED -> Interrupcao ocorreu para o processo 0
+[590 - 1750605073.657554] SCHED -> Selecionado o processo: 0
+[591 - 1750605073.657571] PROC - Processo 0 executando
+[592 - 1750605073.657575] PROC - Processo 0 processando por 13 u.t. [28/93]
+[593 - 1750605073.657652] PROC - Processo 0 saindo por E/S
+[594 - 1750605073.657666] SCHED -> Interrupcao nao occorreu!
+[595 - 1750605073.657670] SCHED -> Interrupcao ocorreu para o processo 10
+[596 - 1750605073.657671] SCHED -> Selecionado o processo: 10
+[597 - 1750605073.657689] PROC - Processo 10 executando
+[598 - 1750605073.657692] PROC - Processo 10 processando por 5 u.t. [2/52]
+[599 - 1750605073.657757] PROC - Processo 10 saindo por E/S
+[600 - 1750605073.657769] SCHED -> Interrupcao ocorreu para o processo 11
+[601 - 1750605073.657772] SCHED -> Selecionado o processo: 11
+[602 - 1750605073.657787] PROC - Processo 11 executando
+[603 - 1750605073.657790] PROC - Processo 11 processando por 20 u.t. [22/98]
+[604 - 1750605073.657871] PROC - Processo 11 saiu por preempcao
+[605 - 1750605073.657884] SCHED -> Interrupcao ocorreu para o processo 19
+[606 - 1750605073.657887] SCHED -> Selecionado o processo: 19
+[607 - 1750605073.657934] PROC - Processo 19 executando
+[608 - 1750605073.657941] PROC - Processo 19 processando por 1 u.t. [1/30]
+[609 - 1750605073.658005] PROC - Processo 19 saindo por E/S
+[610 - 1750605073.658017] SCHED -> Interrupcao ocorreu para o processo 12
+[611 - 1750605073.658020] SCHED -> Selecionado o processo: 12
+[612 - 1750605073.658038] PROC - Processo 12 executando
+[613 - 1750605073.658040] PROC - Processo 12 processando por 1 u.t. [0/41]
+[614 - 1750605073.658103] PROC - Processo 12 finalizando
+[615 - 1750605073.658116] SCHED -> Interrupcao ocorreu para o processo 5
+[616 - 1750605073.658119] SCHED -> Selecionado o processo: 5
+[617 - 1750605073.658134] PROC - Processo 5 executando
+[618 - 1750605073.658135] PROC - Processo 5 processando por 1 u.t. [0/68]
+[619 - 1750605073.658195] PROC - Processo 5 finalizando
+[620 - 1750605073.658208] SCHED -> Interrupcao ocorreu para o processo 17
+[621 - 1750605073.658212] SCHED -> Selecionado o processo: 11
+[622 - 1750605073.658230] PROC - Processo 11 executando
+[623 - 1750605073.658233] PROC - Processo 11 processando por 5 u.t. [17/98]
+[624 - 1750605073.658299] PROC - Processo 11 saindo por E/S
+[625 - 1750605073.658312] SCHED -> Interrupcao nao occorreu!
+[626 - 1750605073.658314] SCHED -> Selecionado o processo: 17
+[627 - 1750605073.658331] PROC - Processo 17 executando
+[628 - 1750605073.658334] PROC - Processo 17 processando por 10 u.t. [12/88]
+[629 - 1750605073.658404] PROC - Processo 17 saindo por E/S
+[630 - 1750605073.658424] SCHED -> Interrupcao ocorreu para o processo 4
+[631 - 1750605073.658428] SCHED -> Selecionado o processo: 4
+[632 - 1750605073.658446] PROC - Processo 4 executando
+[633 - 1750605073.658448] PROC - Processo 4 processando por 2 u.t. [11/69]
+[634 - 1750605073.658508] PROC - Processo 4 saindo por E/S
+[635 - 1750605073.658522] SCHED -> Interrupcao nao occorreu!
+[636 - 1750605073.658525] SCHED -> Interrupcao ocorreu para o processo 13
+[637 - 1750605073.658528] SCHED -> Selecionado o processo: 13
+[638 - 1750605073.658561] PROC - Processo 13 executando
+[639 - 1750605073.658568] PROC - Processo 13 processando por 20 u.t. [58/100]
+[640 - 1750605073.658649] PROC - Processo 13 saiu por preempcao
+[641 - 1750605073.658661] SCHED -> Interrupcao ocorreu para o processo 14
+[642 - 1750605073.658664] SCHED -> Selecionado o processo: 14
+[643 - 1750605073.658680] PROC - Processo 14 executando
+[644 - 1750605073.658681] PROC - Processo 14 processando por 1 u.t. [4/41]
+[645 - 1750605073.658741] PROC - Processo 14 saindo por E/S
+[646 - 1750605073.658753] SCHED -> Interrupcao ocorreu para o processo 18
+[647 - 1750605073.658756] SCHED -> Selecionado o processo: 18
+[648 - 1750605073.658773] PROC - Processo 18 executando
+[649 - 1750605073.658777] PROC - Processo 18 processando por 1 u.t. [4/82]
+[650 - 1750605073.658840] PROC - Processo 18 saindo por E/S
+[651 - 1750605073.658864] SCHED -> Interrupcao nao occorreu!
+[652 - 1750605073.658869] SCHED -> Selecionado o processo: 13
+[653 - 1750605073.658887] PROC - Processo 13 executando
+[654 - 1750605073.658889] PROC - Processo 13 processando por 20 u.t. [38/100]
+[655 - 1750605073.658967] PROC - Processo 13 saiu por preempcao
+[656 - 1750605073.658977] SCHED -> Interrupcao ocorreu para o processo 7
+[657 - 1750605073.658980] SCHED -> Selecionado o processo: 13
+[658 - 1750605073.658991] PROC - Processo 13 executando
+[659 - 1750605073.658993] PROC - Processo 13 processando por 4 u.t. [34/100]
+[660 - 1750605073.659054] PROC - Processo 13 saindo por E/S
+[661 - 1750605073.659066] SCHED -> Interrupcao ocorreu para o processo 16
+[662 - 1750605073.659070] SCHED -> Selecionado o processo: 16
+[663 - 1750605073.659093] PROC - Processo 16 executando
+[664 - 1750605073.659098] PROC - Processo 16 processando por 9 u.t. [4/63]
+[665 - 1750605073.659170] PROC - Processo 16 saindo por E/S
+[666 - 1750605073.659194] SCHED -> Interrupcao ocorreu para o processo 2
+[667 - 1750605073.659201] SCHED -> Selecionado o processo: 2
+[668 - 1750605073.659228] PROC - Processo 2 executando
+[669 - 1750605073.659230] PROC - Processo 2 processando por 4 u.t. [1/71]
+[670 - 1750605073.659310] PROC - Processo 2 saindo por E/S
+[671 - 1750605073.659323] SCHED -> Interrupcao nao occorreu!
+[672 - 1750605073.659327] SCHED -> Selecionado o processo: 7
+[673 - 1750605073.659341] PROC - Processo 7 executando
+[674 - 1750605073.659343] PROC - Processo 7 processando por 20 u.t. [47/89]
+[675 - 1750605073.659430] PROC - Processo 7 saiu por preempcao
+[676 - 1750605073.659446] SCHED -> Interrupcao nao occorreu!
+[677 - 1750605073.659451] SCHED -> Selecionado o processo: 7
+[678 - 1750605073.659468] PROC - Processo 7 executando
+[679 - 1750605073.659470] PROC - Processo 7 processando por 20 u.t. [27/89]
+[680 - 1750605073.659549] PROC - Processo 7 saiu por preempcao
+[681 - 1750605073.659599] SCHED -> Interrupcao nao occorreu!
+[682 - 1750605073.659606] SCHED -> Selecionado o processo: 7
+[683 - 1750605073.659634] PROC - Processo 7 executando
+[684 - 1750605073.659636] PROC - Processo 7 processando por 11 u.t. [16/89]
+[685 - 1750605073.659705] PROC - Processo 7 saindo por E/S
+[686 - 1750605073.659749] SCHED -> Interrupcao ocorreu para o processo 1
+[687 - 1750605073.659756] SCHED -> Selecionado o processo: 1
+[688 - 1750605073.659782] PROC - Processo 1 executando
+[689 - 1750605073.659786] PROC - Processo 1 processando por 1 u.t. [0/24]
+[690 - 1750605073.659851] PROC - Processo 1 finalizando
+[691 - 1750605073.659896] SCHED -> Interrupcao ocorreu para o processo 0
+[692 - 1750605073.659903] SCHED -> Selecionado o processo: 0
+[693 - 1750605073.659928] PROC - Processo 0 executando
+[694 - 1750605073.659934] PROC - Processo 0 processando por 14 u.t. [14/93]
+[695 - 1750605073.660011] PROC - Processo 0 saindo por E/S
+[696 - 1750605073.660027] SCHED -> Interrupcao nao occorreu!
+[697 - 1750605073.660030] SCHED -> Interrupcao ocorreu para o processo 10
+[698 - 1750605073.660032] SCHED -> Selecionado o processo: 10
+[699 - 1750605073.660059] PROC - Processo 10 executando
+[700 - 1750605073.660064] PROC - Processo 10 processando por 2 u.t. [0/52]
+[701 - 1750605073.660128] PROC - Processo 10 finalizando
+[702 - 1750605073.660138] SCHED -> Interrupcao nao occorreu!
+[703 - 1750605073.660142] SCHED -> Interrupcao ocorreu para o processo 19
+[704 - 1750605073.660143] SCHED -> Selecionado o processo: 19
+[705 - 1750605073.660155] PROC - Processo 19 executando
+[706 - 1750605073.660157] PROC - Processo 19 processando por 1 u.t. [0/30]
+[707 - 1750605073.660215] PROC - Processo 19 finalizando
+[708 - 1750605073.660225] SCHED -> Interrupcao nao occorreu!
+[709 - 1750605073.660227] SCHED -> Interrupcao nao occorreu!
+[710 - 1750605073.660228] SCHED -> Interrupcao nao occorreu!
+[711 - 1750605073.660229] SCHED -> Interrupcao ocorreu para o processo 11
+[712 - 1750605073.660231] SCHED -> Selecionado o processo: 11
+[713 - 1750605073.660245] PROC - Processo 11 executando
+[714 - 1750605073.660248] PROC - Processo 11 processando por 2 u.t. [15/98]
+[715 - 1750605073.660310] PROC - Processo 11 saindo por E/S
+[716 - 1750605073.660320] SCHED -> Interrupcao ocorreu para o processo 17
+[717 - 1750605073.660322] SCHED -> Selecionado o processo: 17
+[718 - 1750605073.660335] PROC - Processo 17 executando
+[719 - 1750605073.660337] PROC - Processo 17 processando por 1 u.t. [11/88]
+[720 - 1750605073.660400] PROC - Processo 17 saindo por E/S
+[721 - 1750605073.660418] SCHED -> Interrupcao ocorreu para o processo 4
+[722 - 1750605073.660420] SCHED -> Selecionado o processo: 4
+[723 - 1750605073.660436] PROC - Processo 4 executando
+[724 - 1750605073.660439] PROC - Processo 4 processando por 5 u.t. [6/69]
+[725 - 1750605073.660505] PROC - Processo 4 saindo por E/S
+[726 - 1750605073.660517] SCHED -> Interrupcao nao occorreu!
+[727 - 1750605073.660519] SCHED -> Interrupcao nao occorreu!
+[728 - 1750605073.660520] SCHED -> Interrupcao nao occorreu!
+[729 - 1750605073.660521] SCHED -> Interrupcao ocorreu para o processo 14
+[730 - 1750605073.660523] SCHED -> Selecionado o processo: 14
+[731 - 1750605073.660537] PROC - Processo 14 executando
+[732 - 1750605073.660540] PROC - Processo 14 processando por 1 u.t. [3/41]
+[733 - 1750605073.660602] PROC - Processo 14 saindo por E/S
+[734 - 1750605073.660634] SCHED -> Interrupcao ocorreu para o processo 18
+[735 - 1750605073.660638] SCHED -> Selecionado o processo: 18
+[736 - 1750605073.660657] PROC - Processo 18 executando
+[737 - 1750605073.660660] PROC - Processo 18 processando por 1 u.t. [3/82]
+[738 - 1750605073.660723] PROC - Processo 18 saindo por E/S
+[739 - 1750605073.660736] SCHED -> Interrupcao nao occorreu!
+[740 - 1750605073.660740] SCHED -> Interrupcao nao occorreu!
+[741 - 1750605073.660741] SCHED -> Interrupcao ocorreu para o processo 13
+[742 - 1750605073.660743] SCHED -> Selecionado o processo: 13
+[743 - 1750605073.660755] PROC - Processo 13 executando
+[744 - 1750605073.660758] PROC - Processo 13 processando por 20 u.t. [14/100]
+[745 - 1750605073.660834] PROC - Processo 13 saiu por preempcao
+[746 - 1750605073.660846] SCHED -> Interrupcao ocorreu para o processo 16
+[747 - 1750605073.660849] SCHED -> Selecionado o processo: 16
+[748 - 1750605073.660876] PROC - Processo 16 executando
+[749 - 1750605073.660882] PROC - Processo 16 processando por 1 u.t. [3/63]
+[750 - 1750605073.660946] PROC - Processo 16 saindo por E/S
+[751 - 1750605073.660959] SCHED -> Interrupcao nao occorreu!
+[752 - 1750605073.660962] SCHED -> Selecionado o processo: 13
+[753 - 1750605073.660974] PROC - Processo 13 executando
+[754 - 1750605073.660976] PROC - Processo 13 processando por 0 u.t. [14/100]
+[755 - 1750605073.661033] PROC - Processo 13 saindo por E/S
+[756 - 1750605073.661048] SCHED -> Interrupcao nao occorreu!
+[757 - 1750605073.661050] SCHED -> Interrupcao nao occorreu!
+[758 - 1750605073.661052] SCHED -> Interrupcao ocorreu para o processo 2
+[759 - 1750605073.661054] SCHED -> Selecionado o processo: 2
+[760 - 1750605073.661074] PROC - Processo 2 executando
+[761 - 1750605073.661076] PROC - Processo 2 processando por 1 u.t. [0/71]
+[762 - 1750605073.661143] PROC - Processo 2 finalizando
+[763 - 1750605073.661156] SCHED -> Interrupcao ocorreu para o processo 7
+[764 - 1750605073.661159] SCHED -> Selecionado o processo: 7
+[765 - 1750605073.661171] PROC - Processo 7 executando
+[766 - 1750605073.661173] PROC - Processo 7 processando por 1 u.t. [15/89]
+[767 - 1750605073.661231] PROC - Processo 7 saindo por E/S
+[768 - 1750605073.661240] SCHED -> Interrupcao ocorreu para o processo 0
+[769 - 1750605073.661243] SCHED -> Selecionado o processo: 0
+[770 - 1750605073.661258] PROC - Processo 0 executando
+[771 - 1750605073.661263] PROC - Processo 0 processando por 2 u.t. [12/93]
+[772 - 1750605073.661326] PROC - Processo 0 saindo por E/S
+[773 - 1750605073.661337] SCHED -> Interrupcao ocorreu para o processo 11
+[774 - 1750605073.661339] SCHED -> Selecionado o processo: 11
+[775 - 1750605073.661353] PROC - Processo 11 executando
+[776 - 1750605073.661356] PROC - Processo 11 processando por 7 u.t. [8/98]
+[777 - 1750605073.661418] PROC - Processo 11 saindo por E/S
+[778 - 1750605073.661428] SCHED -> Interrupcao nao occorreu!
+[779 - 1750605073.661430] SCHED -> Interrupcao nao occorreu!
+[780 - 1750605073.661432] SCHED -> Interrupcao ocorreu para o processo 17
+[781 - 1750605073.661433] SCHED -> Selecionado o processo: 17
+[782 - 1750605073.661445] PROC - Processo 17 executando
+[783 - 1750605073.661447] PROC - Processo 17 processando por 0 u.t. [11/88]
+[784 - 1750605073.661507] PROC - Processo 17 saindo por E/S
+[785 - 1750605073.661516] SCHED -> Interrupcao nao occorreu!
+[786 - 1750605073.661518] SCHED -> Interrupcao nao occorreu!
+[787 - 1750605073.661519] SCHED -> Interrupcao ocorreu para o processo 4
+[788 - 1750605073.661521] SCHED -> Selecionado o processo: 4
+[789 - 1750605073.661536] PROC - Processo 4 executando
+[790 - 1750605073.661539] PROC - Processo 4 processando por 1 u.t. [5/69]
+[791 - 1750605073.661602] PROC - Processo 4 saindo por E/S
+[792 - 1750605073.661612] SCHED -> Interrupcao nao occorreu!
+[793 - 1750605073.661614] SCHED -> Interrupcao ocorreu para o processo 14
+[794 - 1750605073.661616] SCHED -> Selecionado o processo: 14
+[795 - 1750605073.661629] PROC - Processo 14 executando
+[796 - 1750605073.661632] PROC - Processo 14 processando por 2 u.t. [1/41]
+[797 - 1750605073.661699] PROC - Processo 14 saindo por E/S
+[798 - 1750605073.661710] SCHED -> Interrupcao nao occorreu!
+[799 - 1750605073.661712] SCHED -> Interrupcao nao occorreu!
+[800 - 1750605073.661713] SCHED -> Interrupcao ocorreu para o processo 18
+[801 - 1750605073.661715] SCHED -> Selecionado o processo: 18
+[802 - 1750605073.661727] PROC - Processo 18 executando
+[803 - 1750605073.661729] PROC - Processo 18 processando por 2 u.t. [1/82]
+[804 - 1750605073.661790] PROC - Processo 18 saindo por E/S
+[805 - 1750605073.661799] SCHED -> Interrupcao ocorreu para o processo 16
+[806 - 1750605073.661802] SCHED -> Selecionado o processo: 16
+[807 - 1750605073.661816] PROC - Processo 16 executando
+[808 - 1750605073.661818] PROC - Processo 16 processando por 3 u.t. [0/63]
+[809 - 1750605073.661880] PROC - Processo 16 finalizando
+[810 - 1750605073.661890] SCHED -> Interrupcao ocorreu para o processo 13
+[811 - 1750605073.661892] SCHED -> Selecionado o processo: 13
+[812 - 1750605073.661904] PROC - Processo 13 executando
+[813 - 1750605073.661906] PROC - Processo 13 processando por 2 u.t. [12/100]
+[814 - 1750605073.661964] PROC - Processo 13 saindo por E/S
+[815 - 1750605073.661974] SCHED -> Interrupcao ocorreu para o processo 7
+[816 - 1750605073.661976] SCHED -> Selecionado o processo: 7
+[817 - 1750605073.661987] PROC - Processo 7 executando
+[818 - 1750605073.661989] PROC - Processo 7 processando por 11 u.t. [4/89]
+[819 - 1750605073.662056] PROC - Processo 7 saindo por E/S
+[820 - 1750605073.662065] SCHED -> Interrupcao nao occorreu!
+[821 - 1750605073.662067] SCHED -> Interrupcao nao occorreu!
+[822 - 1750605073.662068] SCHED -> Interrupcao nao occorreu!
+[823 - 1750605073.662070] SCHED -> Interrupcao ocorreu para o processo 0
+[824 - 1750605073.662071] SCHED -> Selecionado o processo: 0
+[825 - 1750605073.662085] PROC - Processo 0 executando
+[826 - 1750605073.662088] PROC - Processo 0 processando por 0 u.t. [12/93]
+[827 - 1750605073.662148] PROC - Processo 0 saindo por E/S
+[828 - 1750605073.662158] SCHED -> Interrupcao nao occorreu!
+[829 - 1750605073.662161] SCHED -> Interrupcao ocorreu para o processo 11
+[830 - 1750605073.662162] SCHED -> Selecionado o processo: 11
+[831 - 1750605073.662175] PROC - Processo 11 executando
+[832 - 1750605073.662178] PROC - Processo 11 processando por 2 u.t. [6/98]
+[833 - 1750605073.662239] PROC - Processo 11 saindo por E/S
+[834 - 1750605073.662250] SCHED -> Interrupcao nao occorreu!
+[835 - 1750605073.662252] SCHED -> Interrupcao ocorreu para o processo 17
+[836 - 1750605073.662254] SCHED -> Selecionado o processo: 17
+[837 - 1750605073.662266] PROC - Processo 17 executando
+[838 - 1750605073.662268] PROC - Processo 17 processando por 1 u.t. [10/88]
+[839 - 1750605073.662328] PROC - Processo 17 saindo por E/S
+[840 - 1750605073.662338] SCHED -> Interrupcao ocorreu para o processo 4
+[841 - 1750605073.662340] SCHED -> Selecionado o processo: 4
+[842 - 1750605073.662354] PROC - Processo 4 executando
+[843 - 1750605073.662356] PROC - Processo 4 processando por 5 u.t. [0/69]
+[844 - 1750605073.662429] PROC - Processo 4 finalizando
+[845 - 1750605073.662440] SCHED -> Interrupcao ocorreu para o processo 14
+[846 - 1750605073.662442] SCHED -> Selecionado o processo: 14
+[847 - 1750605073.662456] PROC - Processo 14 executando
+[848 - 1750605073.662458] PROC - Processo 14 processando por 1 u.t. [0/41]
+[849 - 1750605073.662522] PROC - Processo 14 finalizando
+[850 - 1750605073.662533] SCHED -> Interrupcao nao occorreu!
+[851 - 1750605073.662535] SCHED -> Interrupcao nao occorreu!
+[852 - 1750605073.662537] SCHED -> Interrupcao nao occorreu!
+[853 - 1750605073.662538] SCHED -> Interrupcao nao occorreu!
+[854 - 1750605073.662539] SCHED -> Interrupcao ocorreu para o processo 18
+[855 - 1750605073.662540] SCHED -> Selecionado o processo: 18
+[856 - 1750605073.662553] PROC - Processo 18 executando
+[857 - 1750605073.662556] PROC - Processo 18 processando por 1 u.t. [0/82]
+[858 - 1750605073.662617] PROC - Processo 18 finalizando
+[859 - 1750605073.662627] SCHED -> Interrupcao nao occorreu!
+[860 - 1750605073.662629] SCHED -> Interrupcao ocorreu para o processo 13
+[861 - 1750605073.662640] SCHED -> Selecionado o processo: 13
+[862 - 1750605073.662653] PROC - Processo 13 executando
+[863 - 1750605073.662655] PROC - Processo 13 processando por 1 u.t. [11/100]
+[864 - 1750605073.662713] PROC - Processo 13 saindo por E/S
+[865 - 1750605073.662725] SCHED -> Interrupcao nao occorreu!
+[866 - 1750605073.662728] SCHED -> Interrupcao nao occorreu!
+[867 - 1750605073.662730] SCHED -> Interrupcao nao occorreu!
+[868 - 1750605073.662731] SCHED -> Interrupcao ocorreu para o processo 7
+[869 - 1750605073.662732] SCHED -> Selecionado o processo: 7
+[870 - 1750605073.662745] PROC - Processo 7 executando
+[871 - 1750605073.662746] PROC - Processo 7 processando por 4 u.t. [0/89]
+[872 - 1750605073.662807] PROC - Processo 7 finalizando
+[873 - 1750605073.662818] SCHED -> Interrupcao nao occorreu!
+[874 - 1750605073.662820] SCHED -> Interrupcao nao occorreu!
+[875 - 1750605073.662821] SCHED -> Interrupcao ocorreu para o processo 0
+[876 - 1750605073.662823] SCHED -> Selecionado o processo: 0
+[877 - 1750605073.662840] PROC - Processo 0 executando
+[878 - 1750605073.662843] PROC - Processo 0 processando por 7 u.t. [5/93]
+[879 - 1750605073.662909] PROC - Processo 0 saindo por E/S
+[880 - 1750605073.662921] SCHED -> Interrupcao nao occorreu!
+[881 - 1750605073.662923] SCHED -> Interrupcao nao occorreu!
+[882 - 1750605073.662924] SCHED -> Interrupcao nao occorreu!
+[883 - 1750605073.662926] SCHED -> Interrupcao nao occorreu!
+[884 - 1750605073.662927] SCHED -> Interrupcao ocorreu para o processo 11
+[885 - 1750605073.662928] SCHED -> Selecionado o processo: 11
+[886 - 1750605073.662941] PROC - Processo 11 executando
+[887 - 1750605073.662943] PROC - Processo 11 processando por 3 u.t. [3/98]
+[888 - 1750605073.663006] PROC - Processo 11 saindo por E/S
+[889 - 1750605073.663015] SCHED -> Interrupcao ocorreu para o processo 17
+[890 - 1750605073.663018] SCHED -> Selecionado o processo: 17
+[891 - 1750605073.663030] PROC - Processo 17 executando
+[892 - 1750605073.663032] PROC - Processo 17 processando por 1 u.t. [9/88]
+[893 - 1750605073.663094] PROC - Processo 17 saindo por E/S
+[894 - 1750605073.663104] SCHED -> Interrupcao ocorreu para o processo 13
+[895 - 1750605073.663106] SCHED -> Selecionado o processo: 13
+[896 - 1750605073.663131] PROC - Processo 13 executando
+[897 - 1750605073.663136] PROC - Processo 13 processando por 0 u.t. [11/100]
+[898 - 1750605073.663197] PROC - Processo 13 saindo por E/S
+[899 - 1750605073.663207] SCHED -> Interrupcao ocorreu para o processo 0
+[900 - 1750605073.663209] SCHED -> Selecionado o processo: 0
+[901 - 1750605073.663226] PROC - Processo 0 executando
+[902 - 1750605073.663229] PROC - Processo 0 processando por 5 u.t. [0/93]
+[903 - 1750605073.663301] PROC - Processo 0 finalizando
+[904 - 1750605073.663316] SCHED -> Interrupcao ocorreu para o processo 11
+[905 - 1750605073.663318] SCHED -> Selecionado o processo: 11
+[906 - 1750605073.663332] PROC - Processo 11 executando
+[907 - 1750605073.663334] PROC - Processo 11 processando por 0 u.t. [3/98]
+[908 - 1750605073.663393] PROC - Processo 11 saindo por E/S
+[909 - 1750605073.663402] SCHED -> Interrupcao ocorreu para o processo 17
+[910 - 1750605073.663404] SCHED -> Selecionado o processo: 17
+[911 - 1750605073.663422] PROC - Processo 17 executando
+[912 - 1750605073.663424] PROC - Processo 17 processando por 1 u.t. [8/88]
+[913 - 1750605073.663486] PROC - Processo 17 saindo por E/S
+[914 - 1750605073.663496] SCHED -> Interrupcao nao occorreu!
+[915 - 1750605073.663499] SCHED -> Interrupcao nao occorreu!
+[916 - 1750605073.663500] SCHED -> Interrupcao ocorreu para o processo 13
+[917 - 1750605073.663502] SCHED -> Selecionado o processo: 13
+[918 - 1750605073.663515] PROC - Processo 13 executando
+[919 - 1750605073.663516] PROC - Processo 13 processando por 10 u.t. [1/100]
+[920 - 1750605073.663583] PROC - Processo 13 saindo por E/S
+[921 - 1750605073.663593] SCHED -> Interrupcao nao occorreu!
+[922 - 1750605073.663595] SCHED -> Interrupcao nao occorreu!
+[923 - 1750605073.663596] SCHED -> Interrupcao nao occorreu!
+[924 - 1750605073.663597] SCHED -> Interrupcao ocorreu para o processo 11
+[925 - 1750605073.663605] SCHED -> Selecionado o processo: 11
+[926 - 1750605073.663627] PROC - Processo 11 executando
+[927 - 1750605073.663631] PROC - Processo 11 processando por 3 u.t. [0/98]
+[928 - 1750605073.663694] PROC - Processo 11 finalizando
+[929 - 1750605073.663705] SCHED -> Interrupcao ocorreu para o processo 17
+[930 - 1750605073.663707] SCHED -> Selecionado o processo: 17
+[931 - 1750605073.663722] PROC - Processo 17 executando
+[932 - 1750605073.663725] PROC - Processo 17 processando por 0 u.t. [8/88]
+[933 - 1750605073.663784] PROC - Processo 17 saindo por E/S
+[934 - 1750605073.663795] SCHED -> Interrupcao ocorreu para o processo 13
+[935 - 1750605073.663797] SCHED -> Selecionado o processo: 13
+[936 - 1750605073.663814] PROC - Processo 13 executando
+[937 - 1750605073.663816] PROC - Processo 13 processando por 1 u.t. [0/100]
+[938 - 1750605073.663876] PROC - Processo 13 finalizando
+[939 - 1750605073.663886] SCHED -> Interrupcao nao occorreu!
+[940 - 1750605073.663889] SCHED -> Interrupcao ocorreu para o processo 17
+[941 - 1750605073.663890] SCHED -> Selecionado o processo: 17
+[942 - 1750605073.663903] PROC - Processo 17 executando
+[943 - 1750605073.663905] PROC - Processo 17 processando por 3 u.t. [5/88]
+[944 - 1750605073.663966] PROC - Processo 17 saindo por E/S
+[945 - 1750605073.663976] SCHED -> Interrupcao nao occorreu!
+[946 - 1750605073.663978] SCHED -> Interrupcao ocorreu para o processo 17
+[947 - 1750605073.663980] SCHED -> Selecionado o processo: 17
+[948 - 1750605073.663992] PROC - Processo 17 executando
+[949 - 1750605073.663994] PROC - Processo 17 processando por 1 u.t. [4/88]
+[950 - 1750605073.664065] PROC - Processo 17 saindo por E/S
+[951 - 1750605073.664098] SCHED -> Interrupcao ocorreu para o processo 17
+[952 - 1750605073.664103] SCHED -> Selecionado o processo: 17
+[953 - 1750605073.664136] PROC - Processo 17 executando
+[954 - 1750605073.664140] PROC - Processo 17 processando por 2 u.t. [2/88]
+[955 - 1750605073.664204] PROC - Processo 17 saindo por E/S
+[956 - 1750605073.664925] SCHED -> Interrupcao ocorreu para o processo 17
+[957 - 1750605073.664929] SCHED -> Selecionado o processo: 17
+[958 - 1750605073.664948] PROC - Processo 17 executando
+[959 - 1750605073.664950] PROC - Processo 17 processando por 1 u.t. [1/88]
+[960 - 1750605073.665012] PROC - Processo 17 saindo por E/S
+[961 - 1750605073.665031] SCHED -> Interrupcao ocorreu para o processo 17
+[962 - 1750605073.665035] SCHED -> Selecionado o processo: 17
+[963 - 1750605073.665051] PROC - Processo 17 executando
+[964 - 1750605073.665054] PROC - Processo 17 processando por 1 u.t. [0/88]
+[965 - 1750605073.665116] PROC - Processo 17 finalizando
+[966 - 1750605073.665136] SCHED -> Escalonador finalizando
+
+_________ ESTATISTICAS ________
+
+TME: 5450.100000
+TMB: 10084.900000
+TMT: 16638.450000
+_______________________________

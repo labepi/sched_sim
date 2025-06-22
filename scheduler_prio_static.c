@@ -16,31 +16,48 @@ struct proc * scheduler(struct proc * current) {
 
     if (current != NULL) {
         int limiar = (int)(0.2 * MAX_TIME);
-        if (current->remaining_time <= limiar) {
-            enqueue(ready, current);
-            current->queue = 0;
-        } else {
-            enqueue(ready2, current);
-            current->queue = 1;
-        }
 
-        if (current->state == READY)
-            count_ready_in(current);
-        else if (current->state == BLOCKED)
-            count_blocked_in(current);
-        else if (current->state == FINISHED)
-            count_finished_in(current);
+        switch (current->state) {
+            case READY:
+            case BLOCKED:
+                if (current->remaining_time <= limiar) {
+                    enqueue(ready, current);
+                    current->queue = 0;
+                    (current->state == READY) ? count_ready_in(current) : count_blocked_in(current);
+                } else {
+                    enqueue(ready2, current);
+                    current->queue = 1;
+                    (current->state == READY) ? count_ready_in(current) : count_blocked_in(current);
+                }
+                break;
+            case FINISHED:
+                enqueue(finished, current);
+                count_finished_in(current);
+                break;
+            default:
+                printf("@@ ERRO no estado de saída do processo %d\n", current->pid);
+        }
     }
 
-    if (isempty(ready) && isempty(ready2)) return NULL;
+    if (isempty(ready) && isempty(ready2))
+        return NULL;
 
+    int fila_escolhida;
     int r = rand() % 100;
-    int fila = (isempty(ready)) ? 1 : (isempty(ready2)) ? 0 : (r < 80 ? 0 : 1);
 
-    selected = (fila == 0) ? dequeue(ready) : dequeue(ready2);
+    if (isempty(ready))
+        fila_escolhida = 1;
+    else if (isempty(ready2))
+        fila_escolhida = 0;
+    else
+        fila_escolhida = (r < 80) ? 0 : 1;
+
+    selected = (fila_escolhida == 0) ? dequeue(ready) : dequeue(ready2);
+
     if (selected) {
         count_ready_out(selected);
         selected->state = RUNNING;
     }
+
     return selected;
 }
