@@ -23,7 +23,7 @@ default: fifo
 all: fifo sjf ljf prio_static prio_dynamic prio_dynamic_quantum
 
 setup:
-	mkdir -p build
+	@mkdir -p build
 
 fifo: $(OBJS) build/fifo.o build/proc_init.o build/proc_interrupt.o
 	$(CC) $(CFLAGS) -pthread $(OBJS) build/fifo.o build/proc_init.o build/proc_interrupt.o -o main_fifo
@@ -43,7 +43,7 @@ prio_dynamic: $(OBJS) build/prio_dynamic.o build/proc_init.o build/proc_interrup
 prio_dynamic_quantum: $(OBJS) build/prio_dynamic_quantum.o build/proc_init.o build/proc_interrupt.o
 	$(CC) $(CFLAGS) -pthread $(OBJS) build/prio_dynamic_quantum.o build/proc_init.o build/proc_interrupt.o -o main_prio_dynamic_quantum
 
-build/main.o: main.c
+build/main.o: main.c | setup
 	$(CC) $(CFLAGS) -c main.c -o build/main.o
 
 build/proc.o: src/proc.c include/proc.h
