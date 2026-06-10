@@ -6,6 +6,8 @@ int make_time_limit();
 
 int make_process_time(struct proc *p);
 
+int make_process_max_time();
+
 double make_time();
 
 void set_time_now(struct timeval * t);

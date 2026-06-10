@@ -25,6 +25,13 @@ int make_process_time(struct proc *p)
     return MAX(make_time_limit(p->remaining_time), 1);
 }
 
+int make_process_max_time()
+{
+    // No mínimo 1 u.t. é retornada
+    return (rand() % MAX_TIME) + 1;
+    // return MAX(make_time_max(), 1);
+}
+
 double make_time()
 {
     return (100 * (double) random() / (double) RAND_MAX);

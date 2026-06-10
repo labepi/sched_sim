@@ -174,7 +174,9 @@ struct proc * createproc()
     p->waiting_time = 0;
     p->blocked_time = 0;
     p->process_time = 0; // int value
-    p->process_time_total = make_time_max(); // int value
+    // garantindo que o tempo é no minimo 1
+    p->process_time_total = make_process_max_time(); // int value
+        // make_time_max();
     p->remaining_time = p->process_time_total;
 
     // estatísticas
